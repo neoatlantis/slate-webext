@@ -126,6 +126,9 @@ module.exports = (env)=>{
                 ]
             }),
         ].concat(generic_plugins),
+        optimization: {
+            minimize: !is_dev,
+        }
     } }
 
     function web_template(scriptname, pagename){

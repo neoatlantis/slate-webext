@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@ygoe/msgpack": "^1.0.3",
+    "buffer": "^6.0.3",
     "lodash": "^4.17.21"
   }
 }

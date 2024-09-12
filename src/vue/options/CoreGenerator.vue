@@ -13,7 +13,7 @@
 </div>
 </template>
 <script>
-import read_password_and_stretch from "app/crypto/read_password_and_stretch";
+import { create_seedfile } from "app/crypto/seedfile.js";
 
 
 export default {
@@ -23,9 +23,8 @@ export default {
 
 	methods: {
 		async create(){
-			let salt = new Uint8Array(16);
-			let key = await read_password_and_stretch(this.password, salt);
-			console.log(key);
+			let seedfile = await create_seedfile(this.password);
+			console.log(seedfile);
 		}
 	}
 }

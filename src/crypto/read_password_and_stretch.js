@@ -1,8 +1,8 @@
-import read_password from "./read_password_as_cryptokey";
+import read_password from "./_read_password_as_cryptokey";
 const subtle = window.crypto.subtle;
 
 
-export default async function(password, salt){
+export default async function(password, salt, iterations){
 
 	const secret_key = await read_password(password);
 
@@ -10,7 +10,7 @@ export default async function(password, salt){
 		name: 'PBKDF2',
 		hash: 'SHA-512',
 		salt,
-		iterations: 1048576,
+		iterations,
 	};
 
 	return subtle.deriveKey(
