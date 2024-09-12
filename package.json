@@ -27,9 +27,6 @@
   },
   "dependencies": {
     "@ygoe/msgpack": "^1.0.3",
-    "argparse": "^2.0.1",
-    "broadcast-channel": "^7.0.0",
-    "lodash": "^4.17.21",
-    "readline-sync": "^1.4.10"
+    "lodash": "^4.17.21"
   }
 }
