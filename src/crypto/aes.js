@@ -5,7 +5,7 @@ const buffer = require("buffer");
 
 
 async function encrypt(key, data){
-	const sha256 = await subtle.digest('SHA-256', data);
+	const sha256 = new Uint8Array(await subtle.digest('SHA-256', data));
 
 	const iv = window.crypto.getRandomValues(new Uint8Array(16));
 	const params = { name: 'AES-CBC', iv };

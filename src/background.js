@@ -1,4 +1,5 @@
 import _ from "lodash";
+import { open_seedfile, create_seedfile } from "app/crypto/seedfile";
 
 const MENU_FILL_ID = "neoatlantis-slate-password";
 
@@ -33,4 +34,3 @@ browser.runtime.onInstalled.addListener(() => {
 
 	browser.contextMenus.onClicked.addListener(on_browser_menus_clicked);
 });
-
