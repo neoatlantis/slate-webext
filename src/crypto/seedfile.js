@@ -31,6 +31,16 @@ async function create_seedfile(password){
 
 
 async function open_seedfile(password, seedfile_text){
+	seedfile_text = seedfile_text.trim();
+
+	if(
+		!_.startsWith(seedfile_text, "SEEDFILE<<< ") &&
+		!_.endsWith(seedfile_text, " <<<SEEDFILE")
+	){
+		throw Error("Not a seedfile.");
+	}
+	seedfile_text = seedfile_text.slice(12, -12);
+
 	let seedfile_serialized = buffer.Buffer.from(seedfile_text, 'base64');
 	let seedfile_struct = msgpack.deserialize(seedfile_serialized);
 

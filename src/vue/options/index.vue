@@ -2,7 +2,7 @@
 
 
 	<div>
-		<CoreStarter :started="started=$event"></CoreStarter>
+		<CoreStarter @started="started=$event"></CoreStarter>
 	</div>
 
 	<div v-if="!started">
