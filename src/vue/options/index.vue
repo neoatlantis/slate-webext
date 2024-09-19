@@ -1,11 +1,14 @@
 <template><div>
 
 
-	<CoreStarter></CoreStarter>
+	<div>
+		<CoreStarter :started="started=$event"></CoreStarter>
+	</div>
 
-	<hr />
-
-	<CoreGenerator></CoreGenerator>
+	<div v-if="!started">
+		<hr />
+		<CoreGenerator></CoreGenerator>
+	</div>
 
 
 </div></template>
@@ -20,12 +23,8 @@ export default {
 
 	data(){
 		return {
-			
+			started: false,
 		}
-	},
-
-	methods: {
-		
 	},
 
 	components: {
