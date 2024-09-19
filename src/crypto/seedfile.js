@@ -24,7 +24,9 @@ async function create_seedfile(password){
 		buffer.Buffer.from(salt),
 		buffer.Buffer.from(seedfile_bytes),
 	];
-	return buffer.Buffer.from(msgpack.serialize(output)).toString("base64");
+	let b64 = buffer.Buffer.from(msgpack.serialize(output)).toString("base64");
+
+	return `SEEDFILE<<< ${b64} <<<SEEDFILE`;
 }
 
 
