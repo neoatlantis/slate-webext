@@ -72,6 +72,7 @@ class CryptoCore {
 
 	async digest(data){
 		if(!isUint8Array(data)) throw Error("data must be a Uint8Array");
+
 		if(this.#keys.size != 256) throw Error("Not initialized.");
 
 		const digest1 = new Uint8Array(await subtle.digest("SHA-512", data));
