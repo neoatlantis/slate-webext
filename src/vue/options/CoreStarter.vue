@@ -161,7 +161,13 @@ var psm_instance = null;
 
 export default {
 	mounted(){
-		setInterval(()=>get_current_tab.call(this), 500);
+		browser.tabs.onActivated.addListener(()=>{
+			get_current_tab.call(this);
+		});
+		browser.tabs.onUpdated.addListener(()=>{
+			get_current_tab.call(this);
+		});
+		get_current_tab.call(this);
 	},
 
 	data(){ return {
