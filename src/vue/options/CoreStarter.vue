@@ -49,7 +49,7 @@
 		<div class="field">
 			<label class="label">Current domain:</label>
 			<div class="control">
-				<input class="input" type="text" v-model="current_domain" readonly>
+				<input class="input is-family-monospace" type="text" v-model="current_domain" readonly>
 			</div>
 		</div>
 
@@ -59,40 +59,52 @@
 				<a href="#" @click.prevent="on_create">Generate</a>
 			</label>
 			<div class="control">
-				<input class="input" type="text" v-model="derive_from_url" placeholder="psm-pwdgen://">
+				<input class="input is-family-monospace" type="text" v-model="derive_from_url" placeholder="psm-pwdgen://">
 			</div>
 		</div>
 
 
-		<div class="field has-addons is-expanded">
-			<p class="control">
+		<div class="field has-addons">
+			<div class="control">
 				<button class="button">Length:</button>
-			</p>
-			<p class="control">
-				<input class="input" type="number" v-model="derive_option_length" />
-			</p>
+			</div>
+
+			<div class="control is-fullwidth">
+				<input class="input is-family-monospace" type="number" v-model="derive_option_length" min="6" max="256"/>
+			</div>
+		
+			
 		</div>
 		<div class="field has-addons is-expanded">
-			<p class="control">
-				<button class="button" :class="{'is-primary':derive_option_upper}" @click="derive_option_upper=!derive_option_upper">Uppercase</button>
-			</p>
-			<p class="control">
-				<button class="button" :class="{'is-primary':derive_option_lower}" @click="derive_option_lower=!derive_option_lower">Lowercase</button>
-			</p>
-			<p class="control">
-				<button class="button" :class="{'is-primary':derive_option_special}" @click="derive_option_special=!derive_option_special">Special</button>
-			</p>
+			<div class="control">
+				<button class="button" :class="{'is-primary':derive_option_upper}" @click="derive_option_upper=!derive_option_upper">Upper</button>
+			</div>
+			<div class="control">
+				<button class="button" :class="{'is-primary':derive_option_lower}" @click="derive_option_lower=!derive_option_lower">Lower</button>
+			</div>
+			<div class="control">
+				<button class="button" :class="{'is-primary':derive_option_number}" @click="derive_option_number=!derive_option_number">Num</button>
+			</div>
+			<div class="control">
+				<button class="button" :class="{'is-primary':derive_option_special}" @click="derive_option_special=!derive_option_special">Spec</button>
+			</div>
 		</div>
 
 		<div class="field">
-			<button class="button is-primary" @click="on_derive">Derive</button>
+			<button
+				class="button is-primary" @click="on_derive"
+				:disabled="
+					!current_domain_matched
+				"
+			>Derive</button>
 		</div>
 
-		<tr v-if="derive_password_error">
-			<td>
-				<span style="color:red">{{ derive_password_error }}</span>
-			</td>
-		</tr>
+		<div style="color:red" class="field" v-if="derive_password_error || !current_domain_matched">
+			<span v-if="!current_domain_matched">
+				Password URL not for current domain. Deriving not allowed.
+			</span>
+			<span>{{ derive_password_error }}</span>
+		</div>
 	</div>
 
 
@@ -100,7 +112,7 @@
 		<div class="field">
 			<label class="label">Result:</label>
 			<div class="control">
-				<input class="input" type="text" v-model="derived_password_from_url" readonly />
+				<input class="input is-family-monospace" type="text" v-model="derived_password_from_url" readonly />
 			</div>
 		</div>
 	</div>
@@ -110,6 +122,8 @@
 
 </div></template>
 <script>
+import _ from "lodash";
+import url_parse from "url-parse";
 import { open_seedfile } from "app/crypto/seedfile";
 const psm = require("app/psm/psm.js");
 
@@ -130,7 +144,16 @@ function get_current_tab(){
 	let queryOptions = { active: true, lastFocusedWindow: true };
     browser.tabs.query(queryOptions, ([tab]) => {
     	let url_parsed = new URL(tab.url);
-    	this.current_domain = url_parsed.hostname;
+    	if(
+    		!url_parsed ||
+    		!_.includes(["http:", "https:"], url_parsed.protocol)
+    	){
+    		this.current_domain = "";
+    		return;
+    	}
+    	if(this.current_domain.toString() != url_parsed.hostname){
+    		this.current_domain = url_parsed.hostname;
+    	}
     });
 }
 
@@ -150,11 +173,14 @@ export default {
 		derived_password_from_url: "",
 		derive_password_error: "",
 
+		derive_option_length: 20,
 		derive_option_upper: true,
 		derive_option_lower: true,
+		derive_option_number: true,
 		derive_option_special: false,
 
 		current_domain: "",
+		deriving_url_required_domain: "",
 
 
 		/// #if DEV
@@ -167,16 +193,51 @@ export default {
 	computed: {
 		started(){
 			return this.core != null;
+		},
+
+		current_domain_matched(){
+			return this.deriving_url_required_domain == this.current_domain;
 		}
 	},
 
 	watch: {
 		started(){
 			this.$emit("started", this.started);
-		}
+		},
+
+		derive_from_url(){
+			let url_p = url_parse(this.derive_from_url);
+			let qs = _.get(url_p, 'query') || "";
+			let qsp = new URLSearchParams(qs);
+			
+			this.deriving_url_required_domain = _.get(url_p, "hostname");
+			this.derive_option_length = _.parseInt(qsp.get("length"));
+			this.derive_option_upper = !_.isNil(qsp.get("upper"));
+			this.derive_option_lower = !_.isNil(qsp.get("lower"));
+			this.derive_option_number = !_.isNil(qsp.get("number"));
+			this.derive_option_special = !_.isNil(qsp.get("special"));			
+		},
+
+		derive_option_length(){ this.rewrite_derive_option() },
+		derive_option_upper(){ this.rewrite_derive_option() },
+		derive_option_lower(){ this.rewrite_derive_option() },
+		derive_option_number(){ this.rewrite_derive_option() },
+		derive_option_special(){ this.rewrite_derive_option() },
 	},
 
 	methods: {
+		rewrite_derive_option(){
+			this.derived_password_from_url = "";
+			let qs = "?length=" + this.derive_option_length;
+			for(let i of ["upper", "lower", "number", "special"]){
+				if(!this["derive_option_"+i]) continue;
+				qs += "&" + i;
+			}
+			let url_p = url_parse(this.derive_from_url);
+			url_p.query = qs;
+			this.derive_from_url = url_p.toString();
+		},
+
 		async read_file(e){
 			this.seedfile = await readfile(e);
 		},
@@ -199,6 +260,7 @@ export default {
 		},
 
 		async on_derive(){
+			this.derived_password_from_url = "";
 			this.derive_password_error = "";
 			let pwdgen = psm_instance.get_password_generator();
 
