@@ -1,15 +1,29 @@
 <template>
-<div>
+<div class="box">
 
-	<div>Create a new seed file.</div>
+	<div class="field">... Or create a new seed file.</div>
 
-	<div>Type in your password: <input type="password" v-model="password" /></div>
-	<div>Repeat your password: <input type="password" v-model="password2" /></div>
+	<div class="field">
+		<label class="label">Type in your password:</label>
+		<div class="control">
+			<input class="input" type="password" v-model="password" />
+		</div>
+	</div>
 
-	<button @click="create" :disabled="!can_create">Create</button>
+	<div class="field">
+		<label class="label">Repeat your password:</label>
+		<div class="control">
+			<input class="input" type="password" v-model="password2" />
+		</div>
+	</div>
 
-	<div v-if="result">
+	<div class="field">
+		<button class="button is-primary" @click="create" :disabled="!can_create">Create</button>
+	</div>
+
+	<div v-if="result" class="field">
 		<textarea 
+			class="textarea"
 			readonly
 			v-model="result"
 			style="width:50vw; height: 20em;"

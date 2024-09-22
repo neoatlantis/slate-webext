@@ -1,4 +1,4 @@
-<template><div>
+<template><div class="container" style="padding: 1em">
 
 
 	<div>
@@ -6,7 +6,7 @@
 	</div>
 
 	<div v-if="!started">
-		<hr />
+		<br />
 		<CoreGenerator></CoreGenerator>
 	</div>
 

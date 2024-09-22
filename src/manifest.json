@@ -14,9 +14,9 @@
         "tabs",
         "storage"
     ],
-    "options_ui": {
-        "page": "options.html",
-        "open_in_tab": true
+    "sidebar_action": {
+        "default_title": "NeoAtlantis Slate",
+        "default_panel": "options.html"
     },
     "action": {
         "default_title": "NeoAtlantis Slate",
