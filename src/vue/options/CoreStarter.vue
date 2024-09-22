@@ -205,6 +205,12 @@ export default {
 			this.$emit("started", this.started);
 		},
 
+		current_domain_matched(){
+			if(!this.current_domain_matched){
+				this.derived_password_from_url = "";
+			}
+		},
+
 		derive_from_url(){
 			let url_p = url_parse(this.derive_from_url);
 			let qs = _.get(url_p, 'query') || "";
