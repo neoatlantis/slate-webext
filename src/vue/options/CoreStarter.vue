@@ -213,7 +213,7 @@ export default {
 
 		current_domain_matched(){
 			if(!this.current_domain_matched){
-				this.derived_password_from_url = "";
+				this.clear_output();
 			}
 		},
 
@@ -238,8 +238,14 @@ export default {
 	},
 
 	methods: {
-		rewrite_derive_option(){
+		clear_output(){
 			this.derived_password_from_url = "";
+			this.derive_password_error = "";
+		},
+
+		rewrite_derive_option(){
+			this.clear_output();
+
 			let qs = "?length=" + this.derive_option_length;
 			for(let i of ["upper", "lower", "number", "special"]){
 				if(!this["derive_option_"+i]) continue;
@@ -272,8 +278,7 @@ export default {
 		},
 
 		async on_derive(){
-			this.derived_password_from_url = "";
-			this.derive_password_error = "";
+			this.clear_output();
 			let pwdgen = psm_instance.get_password_generator();
 
 			let url = this.derive_from_url.toString();

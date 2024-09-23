@@ -30,6 +30,7 @@
     "@ygoe/msgpack": "^1.0.3",
     "buffer": "^6.0.3",
     "lodash": "^4.17.21",
-    "url-parse": "^1.5.10"
+    "url-parse": "^1.5.10",
+    "vue-debounce": "^5.0.0"
   }
 }

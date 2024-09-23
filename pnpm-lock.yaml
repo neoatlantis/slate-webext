@@ -23,6 +23,9 @@ importers:
       url-parse:
         specifier: ^1.5.10
         version: 1.5.10
+      vue-debounce:
+        specifier: ^5.0.0
+        version: 5.0.0(vue@3.4.27(typescript@5.4.5))
     devDependencies:
       copy-webpack-plugin:
         specifier: ^12.0.2
@@ -999,6 +1002,11 @@ packages:
   utila@0.4.0:
     resolution: {integrity: sha512-Z0DbgELS9/L/75wZbro8xAnT50pBVFQZ+hUEueGDU5FN51YSCYM+jdxsfCiHjwNP/4LCDD0i/graKpeBnOXKRA==}
 
+  vue-debounce@5.0.0:
+    resolution: {integrity: sha512-heIPTbmFC6Hghhnwbfjw0nYRBYH+YFp/d9xGQ/rDRPUfU6NBIndbJz+i0pHVii4BXXRi1CaljT6H3fDSbbPMvg==}
+    peerDependencies:
+      vue: '>= 3.0.0'
+
   vue-loader@17.4.2:
     resolution: {integrity: sha512-yTKOA4R/VN4jqjw4y5HrynFL8AK0Z3/Jt7eOJXEitsm0GMRHDBjCfCiuTiLP7OESvsZYo2pATCWhDqxC5ZrM6w==}
     peerDependencies:
@@ -1974,6 +1982,10 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   utila@0.4.0: {}
+
+  vue-debounce@5.0.0(vue@3.4.27(typescript@5.4.5)):
+    dependencies:
+      vue: 3.4.27(typescript@5.4.5)
 
   vue-loader@17.4.2(vue@3.4.27(typescript@5.4.5))(webpack@5.91.0(webpack-cli@5.1.4)):
     dependencies:
