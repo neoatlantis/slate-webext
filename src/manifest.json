@@ -27,5 +27,8 @@
             "id": "slate@plugins.neoatlantis.org",
             "strict_min_version": "42.0"
         }
+    },
+    "content_security_policy": {
+        "extension_pages": "base-uri 'self'; default-src 'none'; style-src 'sha256-79faf1c934ef289d90d7f043f29f5d645b5311c8a5f9c333c5978bffb85d3b68'; script-src 'self';"
     }
 }
