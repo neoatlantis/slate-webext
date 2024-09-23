@@ -219,6 +219,8 @@ export default {
 
 		derive_from_url(){
 			let url_p = url_parse(this.derive_from_url);
+			if(!url_p || !_.startsWith(url_p.protocol, "psm-")) return;
+
 			let qs = _.get(url_p, 'query') || "";
 			let qsp = new URLSearchParams(qs);
 			
@@ -244,6 +246,8 @@ export default {
 		},
 
 		rewrite_derive_option(){
+			let url_p = url_parse(this.derive_from_url);
+			if(!url_p || !_.startsWith(url_p.protocol, "psm-")) return;
 			this.clear_output();
 
 			let qs = "?length=" + this.derive_option_length;
@@ -251,7 +255,7 @@ export default {
 				if(!this["derive_option_"+i]) continue;
 				qs += "&" + i;
 			}
-			let url_p = url_parse(this.derive_from_url);
+			
 			url_p.query = qs;
 			this.derive_from_url = url_p.toString();
 		},
