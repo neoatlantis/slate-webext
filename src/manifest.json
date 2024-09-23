@@ -10,8 +10,10 @@
     "permissions": [
         "clipboardRead",
         "clipboardWrite",
+        "scripting",
         "contextMenus",
         "tabs",
+        "activeTab",
         "storage"
     ],
     "sidebar_action": {

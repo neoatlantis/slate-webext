@@ -116,9 +116,24 @@
 
 	<div class="box" v-if="derived_password_from_url">
 		<div class="field">
-			<label class="label">Result:</label>
+			<label class="label">
+				Result: &nbsp;
+				<a href="#" @click.prevent="reveal_derived_password=!reveal_derived_password">
+					{{ reveal_derived_password ? 'Hide':'Show'}}
+				</a>
+			</label>
 			<div class="control">
-				<input class="input is-family-monospace" type="text" v-model="derived_password_from_url" readonly />
+				<input class="input is-family-monospace" :type="reveal_derived_password?'text':'password'" v-model="derived_password_from_url" readonly />
+			</div>
+		</div>
+		<div class="field">
+			<div class="buttons">
+				<button
+					class="button is-primary" @click="on_result_copy"
+				>Copy</button>
+				<button
+					class="button is-danger" @click="clear_output"
+				>Clear</button>
 			</div>
 		</div>
 	</div>
@@ -133,6 +148,8 @@ import url_parse from "url-parse";
 import { open_seedfile } from "app/crypto/seedfile";
 import EmojiChar from "./EmojiChar.vue";
 const psm = require("app/psm/psm.js");
+
+const channel_update_password = new BroadcastChannel("slate/update-password");
 
 
 function readfile(event) {
@@ -186,6 +203,7 @@ export default {
 		derive_from_url: "",
 		derived_password_from_url: "",
 		derive_password_error: "",
+		reveal_derived_password: false,
 
 		derive_option_length: 20,
 		derive_option_upper: true,
@@ -256,12 +274,22 @@ export default {
 		derive_option_lower(){ this.rewrite_derive_option() },
 		derive_option_number(){ this.rewrite_derive_option() },
 		derive_option_special(){ this.rewrite_derive_option() },
+
+		derived_password_from_url(){ this.broadcast_result() },
 	},
 
 	methods: {
+		broadcast_result(){
+			channel_update_password.postMessage({
+				password: this.derived_password_from_url.toString(),
+				domain: this.current_domain.toString(),
+			});
+		},
+
 		clear_output(){
 			this.derived_password_from_url = "";
 			this.derive_password_error = "";
+			this.reveal_derived_password = false;
 		},
 
 		rewrite_derive_option(){
@@ -319,7 +347,16 @@ export default {
 			this.derive_from_url = await pwdgen.create_url(
 				this.current_domain);
 			this.on_derive();
-		}
+		},
+
+		async on_result_copy(){
+			try{
+				await navigator.clipboard.writeText(
+					this.derived_password_from_url);
+			} catch(e){
+				alert("Failed writing password to clipboard.");
+			}
+		},
 	},
 
 	components: {
