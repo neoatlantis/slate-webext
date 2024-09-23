@@ -46,6 +46,12 @@
 			Slate ready to use.
 		</div>
 
+		<div class="field columns is-centered">
+			<div class="column">
+				<EmojiChar v-for="v in coretest_human" :number="v"></EmojiChar>
+			</div>
+		</div>
+
 		<div class="field">
 			<label class="label">Current domain:</label>
 			<div class="control">
@@ -125,6 +131,7 @@
 import _ from "lodash";
 import url_parse from "url-parse";
 import { open_seedfile } from "app/crypto/seedfile";
+import EmojiChar from "./EmojiChar.vue";
 const psm = require("app/psm/psm.js");
 
 
@@ -174,6 +181,7 @@ export default {
 		seedfile: "",
 		password: "",
 		core: null,
+		core_test: null,
 
 		derive_from_url: "",
 		derived_password_from_url: "",
@@ -203,7 +211,18 @@ export default {
 
 		current_domain_matched(){
 			return this.deriving_url_required_domain == this.current_domain;
-		}
+		},
+
+		coretest_human(){
+			if(!this.core_test || !this.core_test.buffer) return [];
+			let u16n = new Uint16Array(this.core_test.buffer);
+			let k = 0, ret = [];
+			for(let i=0; i<5; i++){
+				k = (k + u16n[i]) % 719;
+				ret.push(k);
+			}
+			return ret;
+		},
 	},
 
 	watch: {
@@ -270,6 +289,7 @@ export default {
 				let core = await open_seedfile(this.password, this.seedfile);
 				const PSM = psm.init((e)=>core.digest(e));
 				this.core = true;
+				this.core_test = await core.digest(new Uint8Array());
 
 				psm_instance = new PSM("default");
 
@@ -300,6 +320,10 @@ export default {
 				this.current_domain);
 			this.on_derive();
 		}
+	},
+
+	components: {
+		EmojiChar,
 	}
 }
 </script>
