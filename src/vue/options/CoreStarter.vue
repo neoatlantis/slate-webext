@@ -2,7 +2,8 @@
 
 	<form v-if="!started" @submit.prevent="start" class="box">
 		<div class="field">
-			Start the crypto core by supplying a seed file and your password.
+			To start redeeming password request urls, supply a seed file and
+			its corresponding password to initialize.
 		</div>
 
 		<div class="field">
@@ -56,7 +57,7 @@
 		<div class="field">
 			<label class="label">Current domain:</label>
 			<div class="control">
-				<input class="input is-family-monospace" type="text" v-model="current_domain" readonly>
+				<input class="input is-family-monospace  has-background-primary-light" type="text" v-model="current_domain" readonly>
 			</div>
 		</div>
 
@@ -66,7 +67,13 @@
 				<a href="#" @click.prevent="on_create">Generate</a>
 			</label>
 			<div class="control">
-				<input class="input is-family-monospace" type="text" v-model="derive_from_url" placeholder="psm-pwdgen://">
+				<input
+					class="input is-family-monospace"
+					type="text"
+					v-model="derive_from_url"
+					placeholder="psm-pwdgen://"
+					@click="$event.target.select()"
+				/>
 			</div>
 		</div>
 
@@ -124,7 +131,13 @@
 				</a>
 			</label>
 			<div class="control">
-				<input class="input is-family-monospace" :type="reveal_derived_password?'text':'password'" v-model="derived_password_from_url" readonly />
+				<input 
+					class="input is-family-monospace"
+					:type="reveal_derived_password?'text':'password'"
+					v-model="derived_password_from_url"
+					readonly
+					@click="$event.target.select()"
+				/>
 			</div>
 		</div>
 		<div class="field">

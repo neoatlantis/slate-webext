@@ -127,7 +127,7 @@ module.exports = (env)=>{
             }),
         ].concat(generic_plugins),
         optimization: {
-            minimize: !is_dev,
+            minimize: false,
         }
     } }
 
