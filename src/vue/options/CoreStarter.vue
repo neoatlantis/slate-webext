@@ -44,6 +44,7 @@
 	<div class="box" v-else>
 		<div class="field">
 			Slate ready to use.
+			<a href="#" @click.prevnet="stop">Restart</a>
 		</div>
 
 		<div class="field columns is-centered">
@@ -150,6 +151,7 @@ import EmojiChar from "./EmojiChar.vue";
 const psm = require("app/psm/psm.js");
 
 const channel_update_password = new BroadcastChannel("slate/update-password");
+const channel_push_password   = new BroadcastChannel("slate/push-password");
 
 
 function readfile(event) {
@@ -192,6 +194,10 @@ export default {
 			get_current_tab.call(this);
 		});
 		get_current_tab.call(this);
+
+		channel_push_password.onmessage = (event)=>{
+			this.broadcast_result();
+		}
 	},
 
 	data(){ return {
@@ -313,7 +319,6 @@ export default {
 
 		async start(){
 			try{
-				
 				let core = await open_seedfile(this.password, this.seedfile);
 				const PSM = psm.init((e)=>core.digest(e));
 				this.core = true;
@@ -321,12 +326,21 @@ export default {
 
 				psm_instance = new PSM("default");
 
-
 				this.password = "";
+				this.seedfile = "";
 			} catch(e){
 				console.error(e);
 				alert("Cannot open seedfile. Bad password?");
 			}
+		},
+
+		async stop(){
+			psm_instance = null;
+			this.password = "";
+			this.clear_output();
+			this.core = null;
+			this.core_test = null;
+			window.reload();
 		},
 
 		async on_derive(){
@@ -337,8 +351,10 @@ export default {
 			try{
 				let password = await pwdgen.get_password(url);
 				this.derived_password_from_url = password;
+				this.broadcast_result();
 			} catch(e){
 				this.derive_password_error = e.message;
+				this.clear_output();
 			}
 		},
 
