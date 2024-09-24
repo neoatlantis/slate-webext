@@ -2,3 +2,4 @@ dev/
 node_modules/
 *.sublime-workspace
 test*.txt
+web-ext-artifacts
