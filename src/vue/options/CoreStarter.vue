@@ -148,7 +148,7 @@ import _ from "lodash";
 import url_parse from "url-parse";
 import { open_seedfile } from "app/crypto/seedfile";
 import EmojiChar from "./EmojiChar.vue";
-const psm = require("app/psm/psm.js");
+const psm = require("password-security-module");
 
 const channel_update_password = new BroadcastChannel("slate/update-password");
 const channel_push_password   = new BroadcastChannel("slate/push-password");
