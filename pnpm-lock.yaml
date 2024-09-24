@@ -26,9 +26,6 @@ importers:
       url-parse:
         specifier: ^1.5.10
         version: 1.5.10
-      vue-debounce:
-        specifier: ^5.0.0
-        version: 5.0.0(vue@3.4.27(typescript@5.4.5))
     devDependencies:
       copy-webpack-plugin:
         specifier: ^12.0.2
@@ -45,9 +42,6 @@ importers:
       ifdef-loader:
         specifier: ^2.3.2
         version: 2.3.2
-      ts-loader:
-        specifier: ^9.5.1
-        version: 9.5.1(typescript@5.4.5)(webpack@5.91.0(webpack-cli@5.1.4))
       vue:
         specifier: ^3.2.45
         version: 3.4.27(typescript@5.4.5)
@@ -923,10 +917,6 @@ packages:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
 
-  source-map@0.7.4:
-    resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
-    engines: {node: '>= 8'}
-
   strip-ansi@6.0.1:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
     engines: {node: '>=8'}
@@ -976,13 +966,6 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
-  ts-loader@9.5.1:
-    resolution: {integrity: sha512-rNH3sK9kGZcH9dYzC7CewQm4NtxJTjSEVRJ2DyBZR7f8/wcta+iV44UPCXc5+nzDzivKtlzV6c9P4e+oFhDLYg==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      typescript: '*'
-      webpack: ^5.0.0
-
   tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
 
@@ -1015,11 +998,6 @@ packages:
 
   utila@0.4.0:
     resolution: {integrity: sha512-Z0DbgELS9/L/75wZbro8xAnT50pBVFQZ+hUEueGDU5FN51YSCYM+jdxsfCiHjwNP/4LCDD0i/graKpeBnOXKRA==}
-
-  vue-debounce@5.0.0:
-    resolution: {integrity: sha512-heIPTbmFC6Hghhnwbfjw0nYRBYH+YFp/d9xGQ/rDRPUfU6NBIndbJz+i0pHVii4BXXRi1CaljT6H3fDSbbPMvg==}
-    peerDependencies:
-      vue: '>= 3.0.0'
 
   vue-loader@17.4.2:
     resolution: {integrity: sha512-yTKOA4R/VN4jqjw4y5HrynFL8AK0Z3/Jt7eOJXEitsm0GMRHDBjCfCiuTiLP7OESvsZYo2pATCWhDqxC5ZrM6w==}
@@ -1931,8 +1909,6 @@ snapshots:
 
   source-map@0.6.1: {}
 
-  source-map@0.7.4: {}
-
   strip-ansi@6.0.1:
     dependencies:
       ansi-regex: 5.0.1
@@ -1971,19 +1947,10 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  ts-loader@9.5.1(typescript@5.4.5)(webpack@5.91.0(webpack-cli@5.1.4)):
-    dependencies:
-      chalk: 4.1.2
-      enhanced-resolve: 5.16.1
-      micromatch: 4.0.7
-      semver: 7.6.2
-      source-map: 0.7.4
-      typescript: 5.4.5
-      webpack: 5.91.0(webpack-cli@5.1.4)
-
   tslib@2.6.2: {}
 
-  typescript@5.4.5: {}
+  typescript@5.4.5:
+    optional: true
 
   undici-types@5.26.5: {}
 
@@ -2007,10 +1974,6 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   utila@0.4.0: {}
-
-  vue-debounce@5.0.0(vue@3.4.27(typescript@5.4.5)):
-    dependencies:
-      vue: 3.4.27(typescript@5.4.5)
 
   vue-loader@17.4.2(vue@3.4.27(typescript@5.4.5))(webpack@5.91.0(webpack-cli@5.1.4)):
     dependencies:
