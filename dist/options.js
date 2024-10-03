@@ -32658,12 +32658,12 @@ const initDirectivesForSSR = () => {
 
 
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=template&id=178fa6e1
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=template&id=463c45ea
 
 
-const CoreStartervue_type_template_id_178fa6e1_hoisted_1 = /*#__PURE__*/createBaseVNode("div", { class: "field" }, " To start redeeming password request urls, supply a seed file and its corresponding password to initialize. ", -1 /* HOISTED */)
-const CoreStartervue_type_template_id_178fa6e1_hoisted_2 = { class: "field" }
-const CoreStartervue_type_template_id_178fa6e1_hoisted_3 = { class: "field" }
+const CoreStartervue_type_template_id_463c45ea_hoisted_1 = /*#__PURE__*/createBaseVNode("div", { class: "field" }, " To start redeeming password request urls, supply a seed file and its corresponding password to initialize. ", -1 /* HOISTED */)
+const CoreStartervue_type_template_id_463c45ea_hoisted_2 = { class: "field" }
+const CoreStartervue_type_template_id_463c45ea_hoisted_3 = { class: "field" }
 const _hoisted_4 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, "Or select a file:", -1 /* HOISTED */)
 const _hoisted_5 = { class: "file" }
 const _hoisted_6 = { class: "file-label" }
@@ -32724,7 +32724,7 @@ const _hoisted_38 = ["type"]
 const _hoisted_39 = { class: "field" }
 const _hoisted_40 = { class: "buttons" }
 
-function CoreStartervue_type_template_id_178fa6e1_render(_ctx, _cache, $props, $setup, $data, $options) {
+function CoreStartervue_type_template_id_463c45ea_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_EmojiChar = resolveComponent("EmojiChar")
 
   return (openBlock(), createElementBlock("div", null, [
@@ -32734,8 +32734,8 @@ function CoreStartervue_type_template_id_178fa6e1_render(_ctx, _cache, $props, $
           onSubmit: _cache[3] || (_cache[3] = withModifiers((...args) => ($options.start && $options.start(...args)), ["prevent"])),
           class: "box"
         }, [
-          CoreStartervue_type_template_id_178fa6e1_hoisted_1,
-          createBaseVNode("div", CoreStartervue_type_template_id_178fa6e1_hoisted_2, [
+          CoreStartervue_type_template_id_463c45ea_hoisted_1,
+          createBaseVNode("div", CoreStartervue_type_template_id_463c45ea_hoisted_2, [
             withDirectives(createBaseVNode("textarea", {
               class: "textarea",
               "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.seedfile) = $event)),
@@ -32744,7 +32744,7 @@ function CoreStartervue_type_template_id_178fa6e1_render(_ctx, _cache, $props, $
               [vModelText, $data.seedfile]
             ])
           ]),
-          createBaseVNode("div", CoreStartervue_type_template_id_178fa6e1_hoisted_3, [
+          createBaseVNode("div", CoreStartervue_type_template_id_463c45ea_hoisted_3, [
             _hoisted_4,
             createBaseVNode("div", _hoisted_5, [
               createBaseVNode("label", _hoisted_6, [
@@ -32805,15 +32805,20 @@ function CoreStartervue_type_template_id_178fa6e1_render(_ctx, _cache, $props, $
               createBaseVNode("a", {
                 href: "#",
                 onClick: _cache[6] || (_cache[6] = withModifiers((...args) => ($options.on_create && $options.on_create(...args)), ["prevent"]))
-              }, "Generate")
+              }, "Generate"),
+              createTextVNode(" | "),
+              createBaseVNode("a", {
+                href: "#",
+                onClick: _cache[7] || (_cache[7] = withModifiers((...args) => ($options.on_paste && $options.on_paste(...args)), ["prevent"]))
+              }, "Paste")
             ]),
             createBaseVNode("div", _hoisted_21, [
               withDirectives(createBaseVNode("input", {
                 class: "input is-family-monospace",
                 type: "text",
-                "onUpdate:modelValue": _cache[7] || (_cache[7] = $event => (($data.derive_from_url) = $event)),
+                "onUpdate:modelValue": _cache[8] || (_cache[8] = $event => (($data.derive_from_url) = $event)),
                 placeholder: "psm-pwdgen://",
-                onClick: _cache[8] || (_cache[8] = $event => ($event.target.select()))
+                onClick: _cache[9] || (_cache[9] = $event => ($event.target.select()))
               }, null, 512 /* NEED_PATCH */), [
                 [vModelText, $data.derive_from_url]
               ])
@@ -32825,7 +32830,7 @@ function CoreStartervue_type_template_id_178fa6e1_render(_ctx, _cache, $props, $
               withDirectives(createBaseVNode("input", {
                 class: "input is-family-monospace",
                 type: "number",
-                "onUpdate:modelValue": _cache[9] || (_cache[9] = $event => (($data.derive_option_length) = $event)),
+                "onUpdate:modelValue": _cache[10] || (_cache[10] = $event => (($data.derive_option_length) = $event)),
                 min: "6",
                 max: "256"
               }, null, 512 /* NEED_PATCH */), [
@@ -32837,35 +32842,33 @@ function CoreStartervue_type_template_id_178fa6e1_render(_ctx, _cache, $props, $
             createBaseVNode("div", _hoisted_26, [
               createBaseVNode("button", {
                 class: shared_esm_bundler_normalizeClass(["button", {'is-primary':$data.derive_option_upper}]),
-                onClick: _cache[10] || (_cache[10] = $event => ($data.derive_option_upper=!$data.derive_option_upper))
+                onClick: _cache[11] || (_cache[11] = $event => ($data.derive_option_upper=!$data.derive_option_upper))
               }, "Upper", 2 /* CLASS */)
             ]),
             createBaseVNode("div", _hoisted_27, [
               createBaseVNode("button", {
                 class: shared_esm_bundler_normalizeClass(["button", {'is-primary':$data.derive_option_lower}]),
-                onClick: _cache[11] || (_cache[11] = $event => ($data.derive_option_lower=!$data.derive_option_lower))
+                onClick: _cache[12] || (_cache[12] = $event => ($data.derive_option_lower=!$data.derive_option_lower))
               }, "Lower", 2 /* CLASS */)
             ]),
             createBaseVNode("div", _hoisted_28, [
               createBaseVNode("button", {
                 class: shared_esm_bundler_normalizeClass(["button", {'is-primary':$data.derive_option_number}]),
-                onClick: _cache[12] || (_cache[12] = $event => ($data.derive_option_number=!$data.derive_option_number))
+                onClick: _cache[13] || (_cache[13] = $event => ($data.derive_option_number=!$data.derive_option_number))
               }, "Num", 2 /* CLASS */)
             ]),
             createBaseVNode("div", _hoisted_29, [
               createBaseVNode("button", {
                 class: shared_esm_bundler_normalizeClass(["button", {'is-primary':$data.derive_option_special}]),
-                onClick: _cache[13] || (_cache[13] = $event => ($data.derive_option_special=!$data.derive_option_special))
+                onClick: _cache[14] || (_cache[14] = $event => ($data.derive_option_special=!$data.derive_option_special))
               }, "Spec", 2 /* CLASS */)
             ])
           ]),
           createBaseVNode("div", _hoisted_30, [
             createBaseVNode("button", {
               class: "button is-primary",
-              onClick: _cache[14] || (_cache[14] = (...args) => ($options.on_derive && $options.on_derive(...args))),
-              disabled: 
-					!$options.current_domain_matched
-				
+              onClick: _cache[15] || (_cache[15] = (...args) => ($options.on_derive && $options.on_derive(...args))),
+              disabled: !$options.can_derive_password
             }, "Derive", 8 /* PROPS */, _hoisted_31)
           ]),
           ($data.derive_password_error || !$options.current_domain_matched)
@@ -32884,16 +32887,16 @@ function CoreStartervue_type_template_id_178fa6e1_render(_ctx, _cache, $props, $
               createTextVNode(" Result:   "),
               createBaseVNode("a", {
                 href: "#",
-                onClick: _cache[15] || (_cache[15] = withModifiers($event => ($data.reveal_derived_password=!$data.reveal_derived_password), ["prevent"]))
+                onClick: _cache[16] || (_cache[16] = withModifiers($event => ($data.reveal_derived_password=!$data.reveal_derived_password), ["prevent"]))
               }, toDisplayString($data.reveal_derived_password ? 'Hide':'Show'), 1 /* TEXT */)
             ]),
             createBaseVNode("div", _hoisted_37, [
               withDirectives(createBaseVNode("input", {
                 class: "input is-family-monospace",
                 type: $data.reveal_derived_password?'text':'password',
-                "onUpdate:modelValue": _cache[16] || (_cache[16] = $event => (($data.derived_password_from_url) = $event)),
+                "onUpdate:modelValue": _cache[17] || (_cache[17] = $event => (($data.derived_password_from_url) = $event)),
                 readonly: "",
-                onClick: _cache[17] || (_cache[17] = $event => ($event.target.select()))
+                onClick: _cache[18] || (_cache[18] = $event => ($event.target.select()))
               }, null, 8 /* PROPS */, _hoisted_38), [
                 [vModelDynamic, $data.derived_password_from_url]
               ])
@@ -32903,11 +32906,11 @@ function CoreStartervue_type_template_id_178fa6e1_render(_ctx, _cache, $props, $
             createBaseVNode("div", _hoisted_40, [
               createBaseVNode("button", {
                 class: "button is-primary",
-                onClick: _cache[18] || (_cache[18] = (...args) => ($options.on_result_copy && $options.on_result_copy(...args)))
+                onClick: _cache[19] || (_cache[19] = (...args) => ($options.on_result_copy && $options.on_result_copy(...args)))
               }, "Copy"),
               createBaseVNode("button", {
                 class: "button is-danger",
-                onClick: _cache[19] || (_cache[19] = (...args) => ($options.clear_output && $options.clear_output(...args)))
+                onClick: _cache[20] || (_cache[20] = (...args) => ($options.clear_output && $options.clear_output(...args)))
               }, "Clear")
             ])
           ])
@@ -32915,7 +32918,7 @@ function CoreStartervue_type_template_id_178fa6e1_render(_ctx, _cache, $props, $
       : createCommentVNode("v-if", true)
   ]))
 }
-;// CONCATENATED MODULE: ./src/vue/options/CoreStarter.vue?vue&type=template&id=178fa6e1
+;// CONCATENATED MODULE: ./src/vue/options/CoreStarter.vue?vue&type=template&id=463c45ea
 
 // EXTERNAL MODULE: ./node_modules/.pnpm/url-parse@1.5.10/node_modules/url-parse/index.js
 var url_parse = __webpack_require__(732);
@@ -33322,6 +33325,19 @@ var psm_instance = null;
 			}
 			return ret;
 		},
+
+		can_derive_password(){
+			if(!this.current_domain_matched) return false;
+			if(
+				!this.derive_option_upper &&
+				!this.derive_option_lower &&
+				!this.derive_option_number &&
+				!this.derive_option_special
+			){
+				return false;
+			}	
+			return true;
+		},
 	},
 
 	watch: {
@@ -33440,6 +33456,11 @@ var psm_instance = null;
 			this.on_derive();
 		},
 
+		async on_paste(){
+			let text = await navigator.clipboard.readText();
+			this.derive_from_url = text;
+		},
+
 		async on_result_copy(){
 			try{
 				await navigator.clipboard.writeText(
@@ -33463,7 +33484,7 @@ var psm_instance = null;
 
 
 ;
-const CoreStarter_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(CoreStartervue_type_script_lang_js, [['render',CoreStartervue_type_template_id_178fa6e1_render]])
+const CoreStarter_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(CoreStartervue_type_script_lang_js, [['render',CoreStartervue_type_template_id_463c45ea_render]])
 
 /* harmony default export */ const CoreStarter = (CoreStarter_exports_);
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreGenerator.vue?vue&type=template&id=5c8462a3

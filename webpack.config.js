@@ -27,6 +27,8 @@ module.exports = (env)=>{
     const is_dev = (env.production === undefined);
     const output_path = __dirname;
 
+    console.log("Webpack is_dev:", is_dev);
+
     const common_srcpath = path.join(__dirname, "common");
 
     const generic_rules = [
@@ -86,7 +88,7 @@ module.exports = (env)=>{
     function __template(srcpath, dstpath, scriptname, pagename){ return {
         entry: path.join(srcpath, scriptname),
         mode: (
-            false
+            is_dev
             ?'development'
             :'production'
         ),
@@ -142,8 +144,6 @@ module.exports = (env)=>{
         web_template("options.js", "options.html"),
         web_template("popup.js", "popup.html"),
     ].forEach(e=>ret.push(e));
-
-    console.log(ret);
 
     return ret;
 };

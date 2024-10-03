@@ -64,7 +64,8 @@
 		<div class="field">
 			<label class="label">
 				Password Request URL:
-				<a href="#" @click.prevent="on_create">Generate</a>
+				<a href="#" @click.prevent="on_create">Generate</a> |
+				<a href="#" @click.prevent="on_paste">Paste</a>
 			</label>
 			<div class="control">
 				<input
@@ -107,9 +108,7 @@
 		<div class="field">
 			<button
 				class="button is-primary" @click="on_derive"
-				:disabled="
-					!current_domain_matched
-				"
+				:disabled="!can_derive_password"
 			>Derive</button>
 		</div>
 
@@ -260,6 +259,19 @@ export default {
 			}
 			return ret;
 		},
+
+		can_derive_password(){
+			if(!this.current_domain_matched) return false;
+			if(
+				!this.derive_option_upper &&
+				!this.derive_option_lower &&
+				!this.derive_option_number &&
+				!this.derive_option_special
+			){
+				return false;
+			}	
+			return true;
+		},
 	},
 
 	watch: {
@@ -376,6 +388,11 @@ export default {
 			this.derive_from_url = await pwdgen.create_url(
 				this.current_domain);
 			this.on_derive();
+		},
+
+		async on_paste(){
+			let text = await navigator.clipboard.readText();
+			this.derive_from_url = text;
 		},
 
 		async on_result_copy(){
