@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "NeoAtlantis Slate Browser",
-    "description": "Browser side connector to NeoAtlantis Slate, a password protection module.",
+    "description": "A password protection module, converts password request urls into actual passwords while keeping the real secret local at computer.",
     "version": "1.0.1",
     "background": {
         "scripts": ["background.js"],
