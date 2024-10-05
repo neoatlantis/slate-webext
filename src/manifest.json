@@ -32,6 +32,6 @@
         }
     },
     "content_security_policy": {
-        "extension_pages": "base-uri 'self'; default-src 'none'; style-src 'sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65'; script-src 'self'; img-src 'self'"
+        "extension_pages": "base-uri 'self'; default-src 'none'; style-src 'sha256-ba526169f8c5f0f0678329f4a24feb3c6bf2c0c18155ab19933ed90a270f8ea6' 'sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65'; script-src 'self'; img-src 'self'"
     }
 }

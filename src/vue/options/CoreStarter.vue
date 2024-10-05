@@ -159,7 +159,7 @@ export default {
 			this.clear_output();
 			this.core = null;
 			this.core_test = null;
-			window.reload();
+			window.location.reload();
 		},
 
 	},

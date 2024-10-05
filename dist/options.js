@@ -32658,12 +32658,12 @@ const initDirectivesForSSR = () => {
 
 
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=template&id=af6717a6
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=template&id=d7c876a0
 
 
-const CoreStartervue_type_template_id_af6717a6_hoisted_1 = /*#__PURE__*/createBaseVNode("div", { class: "mb-3" }, " To start redeeming password request urls, supply a seed file and its corresponding password to initialize. ", -1 /* HOISTED */)
-const CoreStartervue_type_template_id_af6717a6_hoisted_2 = { class: "mb-1" }
-const CoreStartervue_type_template_id_af6717a6_hoisted_3 = { class: "mb-1 input-group-sm input-group" }
+const CoreStartervue_type_template_id_d7c876a0_hoisted_1 = /*#__PURE__*/createBaseVNode("div", { class: "mb-3" }, " To start redeeming password request urls, supply a seed file and its corresponding password to initialize. ", -1 /* HOISTED */)
+const CoreStartervue_type_template_id_d7c876a0_hoisted_2 = { class: "mb-1" }
+const CoreStartervue_type_template_id_d7c876a0_hoisted_3 = { class: "mb-1 input-group-sm input-group" }
 const _hoisted_4 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Or select a file...", -1 /* HOISTED */)
 const _hoisted_5 = { class: "mb-1 input-group-sm input-group" }
 const _hoisted_6 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Your password:", -1 /* HOISTED */)
@@ -32678,7 +32678,7 @@ const _hoisted_9 = { class: "field" }
 const _hoisted_10 = { class: "field columns is-centered" }
 const _hoisted_11 = { class: "column" }
 
-function CoreStartervue_type_template_id_af6717a6_render(_ctx, _cache, $props, $setup, $data, $options) {
+function CoreStartervue_type_template_id_d7c876a0_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_EmojiChar = resolveComponent("EmojiChar")
   const _component_PSMPwdgen = resolveComponent("PSMPwdgen")
 
@@ -32689,8 +32689,8 @@ function CoreStartervue_type_template_id_af6717a6_render(_ctx, _cache, $props, $
           onSubmit: _cache[3] || (_cache[3] = withModifiers((...args) => ($options.start && $options.start(...args)), ["prevent"])),
           class: "box"
         }, [
-          CoreStartervue_type_template_id_af6717a6_hoisted_1,
-          createBaseVNode("div", CoreStartervue_type_template_id_af6717a6_hoisted_2, [
+          CoreStartervue_type_template_id_d7c876a0_hoisted_1,
+          createBaseVNode("div", CoreStartervue_type_template_id_d7c876a0_hoisted_2, [
             withDirectives(createBaseVNode("textarea", {
               class: "form-control form-control-sm",
               "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.seedfile) = $event)),
@@ -32699,7 +32699,7 @@ function CoreStartervue_type_template_id_af6717a6_render(_ctx, _cache, $props, $
               [vModelText, $data.seedfile]
             ])
           ]),
-          createBaseVNode("div", CoreStartervue_type_template_id_af6717a6_hoisted_3, [
+          createBaseVNode("div", CoreStartervue_type_template_id_d7c876a0_hoisted_3, [
             _hoisted_4,
             createBaseVNode("input", {
               class: "form-control",
@@ -32739,7 +32739,7 @@ function CoreStartervue_type_template_id_af6717a6_render(_ctx, _cache, $props, $
         ]))
   ]))
 }
-;// CONCATENATED MODULE: ./src/vue/options/CoreStarter.vue?vue&type=template&id=af6717a6
+;// CONCATENATED MODULE: ./src/vue/options/CoreStarter.vue?vue&type=template&id=d7c876a0
 
 // EXTERNAL MODULE: ./node_modules/.pnpm/url-parse@1.5.10/node_modules/url-parse/index.js
 var url_parse = __webpack_require__(732);
@@ -33041,24 +33041,24 @@ var exportHelper = __webpack_require__(451);
 const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(EmojiCharvue_type_script_lang_js, [['render',EmojiCharvue_type_template_id_3f4ff912_render]])
 
 /* harmony default export */ const EmojiChar = (__exports__);
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/PSMPwdgen.vue?vue&type=template&id=3cbf3373
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/PSMPwdgen.vue?vue&type=template&id=04507f14
 
 
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_1 = { class: "box" }
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_2 = { class: "mb-1 input-group-sm input-group" }
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_3 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Current domain:", -1 /* HOISTED */)
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_4 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, " Password Request URL: ", -1 /* HOISTED */)
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_5 = { class: "mb-1 input-group-sm input-group" }
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_6 = { class: "mb-1 input-group-sm input-group" }
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_7 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Length:", -1 /* HOISTED */)
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_8 = { class: "" }
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_9 = ["disabled"]
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_10 = {
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_1 = { class: "box" }
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_2 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_3 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Current domain:", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_4 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, " Password Request URL: ", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_5 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_6 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_7 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Length:", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_8 = { class: "" }
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_9 = ["disabled"]
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_10 = {
   key: 0,
   style: {"color":"red"},
   class: "field"
 }
-const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_11 = { key: 0 }
+const PSMPwdgenvue_type_template_id_04507f14_hoisted_11 = { key: 0 }
 const _hoisted_12 = {
   key: 0,
   class: "mb-2"
@@ -33070,13 +33070,13 @@ const _hoisted_16 = ["type"]
 const _hoisted_17 = { class: "field" }
 const _hoisted_18 = { class: "buttons" }
 
-function PSMPwdgenvue_type_template_id_3cbf3373_render(_ctx, _cache, $props, $setup, $data, $options) {
+function PSMPwdgenvue_type_template_id_04507f14_render(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("div", null, [
-    createBaseVNode("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_1, [
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_2, [
-        PSMPwdgenvue_type_template_id_3cbf3373_hoisted_3,
+    createBaseVNode("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_1, [
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_2, [
+        PSMPwdgenvue_type_template_id_04507f14_hoisted_3,
         withDirectives(createBaseVNode("input", {
-          class: "form-control text-monospace bg-secondary",
+          class: "form-control text-monospace bg-secondary text-white",
           type: "text",
           "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.current_domain) = $event)),
           readonly: ""
@@ -33084,34 +33084,39 @@ function PSMPwdgenvue_type_template_id_3cbf3373_render(_ctx, _cache, $props, $se
           [vModelText, $data.current_domain]
         ])
       ]),
-      PSMPwdgenvue_type_template_id_3cbf3373_hoisted_4,
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_5, [
+      PSMPwdgenvue_type_template_id_04507f14_hoisted_4,
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_5, [
+        createBaseVNode("a", {
+          href: "#",
+          class: "btn btn-outline-secondary",
+          onClick: _cache[1] || (_cache[1] = withModifiers((...args) => ($options.on_create && $options.on_create(...args)), ["prevent"]))
+        }, "New"),
+        createBaseVNode("a", {
+          href: "#",
+          class: "btn btn-outline-secondary",
+          onClick: _cache[2] || (_cache[2] = withModifiers((...args) => ($options.on_paste && $options.on_paste(...args)), ["prevent"]))
+        }, "Paste"),
         withDirectives(createBaseVNode("input", {
           class: "form-control text-monospace",
           type: "text",
-          "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (($data.derive_from_url) = $event)),
+          "onUpdate:modelValue": _cache[3] || (_cache[3] = $event => (($data.derive_from_url) = $event)),
           placeholder: "psm-pwdgen://",
-          onClick: _cache[2] || (_cache[2] = $event => ($event.target.select()))
+          onClick: _cache[4] || (_cache[4] = $event => ($event.target.select()))
         }, null, 512 /* NEED_PATCH */), [
           [vModelText, $data.derive_from_url]
         ]),
         createBaseVNode("a", {
           href: "#",
           class: "btn btn-outline-secondary",
-          onClick: _cache[3] || (_cache[3] = withModifiers((...args) => ($options.on_create && $options.on_create(...args)), ["prevent"]))
-        }, "New"),
-        createBaseVNode("a", {
-          href: "#",
-          class: "btn btn-outline-secondary",
-          onClick: _cache[4] || (_cache[4] = withModifiers((...args) => ($options.on_paste && $options.on_paste(...args)), ["prevent"]))
-        }, "Paste")
+          onClick: _cache[5] || (_cache[5] = withModifiers((...args) => ($options.on_url_copy && $options.on_url_copy(...args)), ["prevent"]))
+        }, "Copy")
       ]),
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_6, [
-        PSMPwdgenvue_type_template_id_3cbf3373_hoisted_7,
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_6, [
+        PSMPwdgenvue_type_template_id_04507f14_hoisted_7,
         withDirectives(createBaseVNode("input", {
           class: "form-control text-monospace",
           type: "number",
-          "onUpdate:modelValue": _cache[5] || (_cache[5] = $event => (($data.derive_option_length) = $event)),
+          "onUpdate:modelValue": _cache[6] || (_cache[6] = $event => (($data.derive_option_length) = $event)),
           min: "6",
           max: "256"
         }, null, 512 /* NEED_PATCH */), [
@@ -33122,41 +33127,47 @@ function PSMPwdgenvue_type_template_id_3cbf3373_render(_ctx, _cache, $props, $se
                     'btn-primary':$data.derive_option_upper,
                     'btn-outline-secondary':!$data.derive_option_upper
                 }]),
-          onClick: _cache[6] || (_cache[6] = $event => ($data.derive_option_upper=!$data.derive_option_upper))
-        }, "Upper", 2 /* CLASS */),
+          onClick: _cache[7] || (_cache[7] = $event => ($data.derive_option_upper=!$data.derive_option_upper))
+        }, "ABC", 2 /* CLASS */),
         createBaseVNode("button", {
           class: shared_esm_bundler_normalizeClass(["btn", {
                     'btn-primary':$data.derive_option_lower,
                     'btn-outline-secondary':!$data.derive_option_lower
                 }]),
-          onClick: _cache[7] || (_cache[7] = $event => ($data.derive_option_lower=!$data.derive_option_lower))
-        }, "Lower", 2 /* CLASS */),
+          onClick: _cache[8] || (_cache[8] = $event => ($data.derive_option_lower=!$data.derive_option_lower))
+        }, "abc", 2 /* CLASS */),
         createBaseVNode("button", {
           class: shared_esm_bundler_normalizeClass(["btn", {
                     'btn-primary':$data.derive_option_number,
                     'btn-outline-secondary':!$data.derive_option_number
                 }]),
-          onClick: _cache[8] || (_cache[8] = $event => ($data.derive_option_number=!$data.derive_option_number))
-        }, "Num", 2 /* CLASS */),
+          onClick: _cache[9] || (_cache[9] = $event => ($data.derive_option_number=!$data.derive_option_number))
+        }, "123", 2 /* CLASS */),
         createBaseVNode("button", {
           class: shared_esm_bundler_normalizeClass(["btn", {
                     'btn-primary':$data.derive_option_special,
                     'btn-outline-secondary':!$data.derive_option_special
                 }]),
-          onClick: _cache[9] || (_cache[9] = $event => ($data.derive_option_special=!$data.derive_option_special))
-        }, "Spec", 2 /* CLASS */)
+          onClick: _cache[10] || (_cache[10] = $event => ($data.derive_option_special=!$data.derive_option_special))
+        }, "@#$", 2 /* CLASS */)
       ]),
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_8, [
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_8, [
         createBaseVNode("button", {
           class: "btn btn-sm btn-primary",
-          onClick: _cache[10] || (_cache[10] = (...args) => ($options.on_derive && $options.on_derive(...args))),
+          onClick: _cache[11] || (_cache[11] = (...args) => ($options.on_derive && $options.on_derive(...args))),
           disabled: !$options.can_derive_password
-        }, "Derive", 8 /* PROPS */, PSMPwdgenvue_type_template_id_3cbf3373_hoisted_9)
+        }, "Derive", 8 /* PROPS */, PSMPwdgenvue_type_template_id_04507f14_hoisted_9)
       ]),
       ($data.derive_password_error || !$options.current_domain_matched)
-        ? (openBlock(), createElementBlock("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_10, [
+        ? (openBlock(), createElementBlock("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_10, [
             (!$options.current_domain_matched)
-              ? (openBlock(), createElementBlock("span", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_11, " Password URL not for current domain. Deriving not allowed. "))
+              ? (openBlock(), createElementBlock("span", PSMPwdgenvue_type_template_id_04507f14_hoisted_11, [
+                  createTextVNode(" Password URL not for current domain. Deriving not allowed. "),
+                  createBaseVNode("a", {
+                    href: "#",
+                    onClick: _cache[12] || (_cache[12] = withModifiers($event => ($data.override_current_domain_once=true), ["prevent"]))
+                  }, "Override once (dangerous!).")
+                ]))
               : createCommentVNode("v-if", true),
             createBaseVNode("span", null, toDisplayString($data.derive_password_error), 1 /* TEXT */)
           ]))
@@ -33170,15 +33181,15 @@ function PSMPwdgenvue_type_template_id_3cbf3373_render(_ctx, _cache, $props, $se
               withDirectives(createBaseVNode("input", {
                 class: "form-control form-control-sm text-monospace",
                 type: $data.reveal_derived_password?'text':'password',
-                "onUpdate:modelValue": _cache[11] || (_cache[11] = $event => (($data.derived_password_from_url) = $event)),
+                "onUpdate:modelValue": _cache[13] || (_cache[13] = $event => (($data.derived_password_from_url) = $event)),
                 readonly: "",
-                onClick: _cache[12] || (_cache[12] = $event => ($event.target.select()))
+                onClick: _cache[14] || (_cache[14] = $event => ($event.target.select()))
               }, null, 8 /* PROPS */, _hoisted_16), [
                 [vModelDynamic, $data.derived_password_from_url]
               ]),
               createBaseVNode("button", {
                 class: "btn btn-primary",
-                onClick: _cache[13] || (_cache[13] = withModifiers($event => ($data.reveal_derived_password=!$data.reveal_derived_password), ["prevent"]))
+                onClick: _cache[15] || (_cache[15] = withModifiers($event => ($data.reveal_derived_password=!$data.reveal_derived_password), ["prevent"]))
               }, toDisplayString($data.reveal_derived_password ? 'Hide':'Show'), 1 /* TEXT */)
             ])
           ]),
@@ -33186,11 +33197,11 @@ function PSMPwdgenvue_type_template_id_3cbf3373_render(_ctx, _cache, $props, $se
             createBaseVNode("div", _hoisted_18, [
               createBaseVNode("button", {
                 class: "btn btn-primary btn-sm",
-                onClick: _cache[14] || (_cache[14] = (...args) => ($options.on_result_copy && $options.on_result_copy(...args)))
+                onClick: _cache[16] || (_cache[16] = (...args) => ($options.on_result_copy && $options.on_result_copy(...args)))
               }, "Copy"),
               createBaseVNode("button", {
                 class: "btn btn-danger btn-sm ms-1",
-                onClick: _cache[15] || (_cache[15] = (...args) => ($options.clear_output && $options.clear_output(...args)))
+                onClick: _cache[17] || (_cache[17] = (...args) => ($options.clear_output && $options.clear_output(...args)))
               }, "Clear")
             ])
           ])
@@ -33198,7 +33209,7 @@ function PSMPwdgenvue_type_template_id_3cbf3373_render(_ctx, _cache, $props, $se
       : createCommentVNode("v-if", true)
   ]))
 }
-;// CONCATENATED MODULE: ./src/vue/options/PSMPwdgen.vue?vue&type=template&id=3cbf3373
+;// CONCATENATED MODULE: ./src/vue/options/PSMPwdgen.vue?vue&type=template&id=04507f14
 
 ;// CONCATENATED MODULE: ./src/vue/options/psm_instance.js
 const psm = __webpack_require__(39);
@@ -33292,6 +33303,7 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
         derive_option_special: false,
 
         current_domain: "",
+        override_current_domain_once: false,
         deriving_url_required_domain: "",
 
 
@@ -33302,6 +33314,7 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
 
     computed: {
         current_domain_matched(){
+            if(this.override_current_domain_once) return true;
             return this.deriving_url_required_domain == this.current_domain;
         },
 
@@ -33322,6 +33335,7 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
     watch: {
 
         current_domain_matched(){
+            if(this.override_current_domain_once) return;
             if(!this.current_domain_matched){
                 this.clear_output();
             }
@@ -33359,10 +33373,13 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
             });
         },
 
-        clear_output(){
+        clear_output(keep_override){
             this.derived_password_from_url = "";
             this.derive_password_error = "";
             this.reveal_derived_password = false;
+            if(!keep_override){
+                this.override_current_domain_once = false;
+            }
         },
 
         rewrite_derive_option(){
@@ -33381,7 +33398,7 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
         },
 
         async on_derive(){
-            this.clear_output();
+            this.clear_output(true);
             let pwdgen = get_pwdgen();
 
             let url = this.derive_from_url.toString();
@@ -33415,6 +33432,15 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
                 alert("Failed writing password to clipboard.");
             }
         },
+
+        async on_url_copy(){
+            try{
+                await navigator.clipboard.writeText(
+                    this.derive_from_url);
+            } catch(e){
+                alert("Failed writing url to clipboard.");
+            }
+        }
     },
 
     components: {
@@ -33430,7 +33456,7 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
 
 
 ;
-const PSMPwdgen_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(PSMPwdgenvue_type_script_lang_js, [['render',PSMPwdgenvue_type_template_id_3cbf3373_render]])
+const PSMPwdgen_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(PSMPwdgenvue_type_script_lang_js, [['render',PSMPwdgenvue_type_template_id_04507f14_render]])
 
 /* harmony default export */ const PSMPwdgen = (PSMPwdgen_exports_);
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=script&lang=js
@@ -33543,7 +33569,7 @@ function CoreStartervue_type_script_lang_js_readfile(event) {
 			this.clear_output();
 			this.core = null;
 			this.core_test = null;
-			window.reload();
+			window.location.reload();
 		},
 
 	},
@@ -33562,7 +33588,7 @@ function CoreStartervue_type_script_lang_js_readfile(event) {
 
 
 ;
-const CoreStarter_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(CoreStartervue_type_script_lang_js, [['render',CoreStartervue_type_template_id_af6717a6_render]])
+const CoreStarter_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(CoreStartervue_type_script_lang_js, [['render',CoreStartervue_type_template_id_d7c876a0_render]])
 
 /* harmony default export */ const CoreStarter = (CoreStarter_exports_);
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreSeedfileGenerator.vue?vue&type=template&id=949273f6

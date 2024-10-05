@@ -5,7 +5,7 @@
         <div class="mb-1 input-group-sm input-group">
             <span class="input-group-text bg-white">Current domain:</span>
             <input
-                class="form-control text-monospace bg-secondary"
+                class="form-control text-monospace bg-secondary text-white"
                 type="text" v-model="current_domain" readonly />
         </div>
 
@@ -14,6 +14,10 @@
         </label>
 
         <div class="mb-1 input-group-sm input-group">
+            <a href="#" class="btn btn-outline-secondary"
+                @click.prevent="on_create">New</a>
+            <a href="#" class="btn btn-outline-secondary"
+                @click.prevent="on_paste">Paste</a>
             <input
                 class="form-control text-monospace"
                 type="text"
@@ -21,11 +25,8 @@
                 placeholder="psm-pwdgen://"
                 @click="$event.target.select()"
             />
-
             <a href="#" class="btn btn-outline-secondary"
-                @click.prevent="on_create">New</a>
-            <a href="#" class="btn btn-outline-secondary"
-                @click.prevent="on_paste">Paste</a>
+                @click.prevent="on_url_copy">Copy</a>            
         </div>
             
         <div class="mb-1 input-group-sm input-group">
@@ -41,7 +42,7 @@
                     'btn-outline-secondary':!derive_option_upper
                 }"
                 @click="derive_option_upper=!derive_option_upper"
-            >Upper</button>
+            >ABC</button>
             <button
                 class="btn"
                 :class="{
@@ -49,7 +50,7 @@
                     'btn-outline-secondary':!derive_option_lower
                 }"
                 @click="derive_option_lower=!derive_option_lower"
-            >Lower</button>
+            >abc</button>
             <button
                 class="btn"
                 :class="{
@@ -57,7 +58,7 @@
                     'btn-outline-secondary':!derive_option_number
                 }"
                 @click="derive_option_number=!derive_option_number"
-            >Num</button>
+            >123</button>
             <button
                 class="btn"
                 :class="{
@@ -65,7 +66,7 @@
                     'btn-outline-secondary':!derive_option_special
                 }"
                 @click="derive_option_special=!derive_option_special"
-            >Spec</button>
+            >@#$</button>
         </div>
 
         <div class="">
@@ -78,6 +79,7 @@
         <div style="color:red" class="field" v-if="derive_password_error || !current_domain_matched">
             <span v-if="!current_domain_matched">
                 Password URL not for current domain. Deriving not allowed.
+                <a href="#" @click.prevent="override_current_domain_once=true">Override once (dangerous!).</a>
             </span>
             <span>{{ derive_password_error }}</span>
         </div>
@@ -190,6 +192,7 @@ export default {
         derive_option_special: false,
 
         current_domain: "",
+        override_current_domain_once: false,
         deriving_url_required_domain: "",
 
 
@@ -200,6 +203,7 @@ export default {
 
     computed: {
         current_domain_matched(){
+            if(this.override_current_domain_once) return true;
             return this.deriving_url_required_domain == this.current_domain;
         },
 
@@ -220,6 +224,7 @@ export default {
     watch: {
 
         current_domain_matched(){
+            if(this.override_current_domain_once) return;
             if(!this.current_domain_matched){
                 this.clear_output();
             }
@@ -257,10 +262,13 @@ export default {
             });
         },
 
-        clear_output(){
+        clear_output(keep_override){
             this.derived_password_from_url = "";
             this.derive_password_error = "";
             this.reveal_derived_password = false;
+            if(!keep_override){
+                this.override_current_domain_once = false;
+            }
         },
 
         rewrite_derive_option(){
@@ -279,7 +287,7 @@ export default {
         },
 
         async on_derive(){
-            this.clear_output();
+            this.clear_output(true);
             let pwdgen = get_pwdgen();
 
             let url = this.derive_from_url.toString();
@@ -313,6 +321,15 @@ export default {
                 alert("Failed writing password to clipboard.");
             }
         },
+
+        async on_url_copy(){
+            try{
+                await navigator.clipboard.writeText(
+                    this.derive_from_url);
+            } catch(e){
+                alert("Failed writing url to clipboard.");
+            }
+        }
     },
 
     components: {
