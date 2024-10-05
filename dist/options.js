@@ -31046,19 +31046,19 @@ const DeprecationTypes = null;
 
 
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/index.vue?vue&type=template&id=e695c548
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/index.vue?vue&type=template&id=6b12e668
 
 
 const _hoisted_1 = {
-  class: "container",
-  style: {"padding":"1em"}
+  class: "container-fluid",
+  style: {"padding":"0.5em"}
 }
 const _hoisted_2 = { key: 0 }
 const _hoisted_3 = /*#__PURE__*/createBaseVNode("br", null, null, -1 /* HOISTED */)
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_CoreStarter = resolveComponent("CoreStarter")
-  const _component_CoreGenerator = resolveComponent("CoreGenerator")
+  const _component_CoreSeedfileGenerator = resolveComponent("CoreSeedfileGenerator")
 
   return (openBlock(), createElementBlock("div", _hoisted_1, [
     createBaseVNode("div", null, [
@@ -31069,12 +31069,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     (!$data.started)
       ? (openBlock(), createElementBlock("div", _hoisted_2, [
           _hoisted_3,
-          createVNode(_component_CoreGenerator)
+          createVNode(_component_CoreSeedfileGenerator)
         ]))
       : createCommentVNode("v-if", true)
   ]))
 }
-;// CONCATENATED MODULE: ./src/vue/options/index.vue?vue&type=template&id=e695c548
+;// CONCATENATED MODULE: ./src/vue/options/index.vue?vue&type=template&id=6b12e668
 
 // EXTERNAL MODULE: ./node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/lodash.js
 var lodash = __webpack_require__(935);
@@ -32658,74 +32658,29 @@ const initDirectivesForSSR = () => {
 
 
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=template&id=463c45ea
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=template&id=af6717a6
 
 
-const CoreStartervue_type_template_id_463c45ea_hoisted_1 = /*#__PURE__*/createBaseVNode("div", { class: "field" }, " To start redeeming password request urls, supply a seed file and its corresponding password to initialize. ", -1 /* HOISTED */)
-const CoreStartervue_type_template_id_463c45ea_hoisted_2 = { class: "field" }
-const CoreStartervue_type_template_id_463c45ea_hoisted_3 = { class: "field" }
-const _hoisted_4 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, "Or select a file:", -1 /* HOISTED */)
-const _hoisted_5 = { class: "file" }
-const _hoisted_6 = { class: "file-label" }
-const _hoisted_7 = /*#__PURE__*/createBaseVNode("span", { class: "file-cta" }, [
-  /*#__PURE__*/createBaseVNode("span", { class: "file-icon" }, [
-    /*#__PURE__*/createBaseVNode("i", { class: "fas fa-upload" })
-  ]),
-  /*#__PURE__*/createBaseVNode("span", { class: "file-label" }, " Choose a file… ")
-], -1 /* HOISTED */)
-const _hoisted_8 = { class: "field" }
-const _hoisted_9 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, "Your password:", -1 /* HOISTED */)
-const _hoisted_10 = { class: "control" }
-const _hoisted_11 = /*#__PURE__*/createBaseVNode("div", { class: "field" }, [
+const CoreStartervue_type_template_id_af6717a6_hoisted_1 = /*#__PURE__*/createBaseVNode("div", { class: "mb-3" }, " To start redeeming password request urls, supply a seed file and its corresponding password to initialize. ", -1 /* HOISTED */)
+const CoreStartervue_type_template_id_af6717a6_hoisted_2 = { class: "mb-1" }
+const CoreStartervue_type_template_id_af6717a6_hoisted_3 = { class: "mb-1 input-group-sm input-group" }
+const _hoisted_4 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Or select a file...", -1 /* HOISTED */)
+const _hoisted_5 = { class: "mb-1 input-group-sm input-group" }
+const _hoisted_6 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Your password:", -1 /* HOISTED */)
+const _hoisted_7 = /*#__PURE__*/createBaseVNode("div", { class: "mb-1" }, [
   /*#__PURE__*/createBaseVNode("button", {
-    class: "button is-primary",
+    class: "btn btn-sm btn-primary",
     type: "submit"
   }, "Start the core")
 ], -1 /* HOISTED */)
-const _hoisted_12 = {
-  key: 1,
-  class: "box"
-}
-const _hoisted_13 = { class: "field" }
-const _hoisted_14 = { class: "field columns is-centered" }
-const _hoisted_15 = { class: "column" }
-const _hoisted_16 = { class: "field" }
-const _hoisted_17 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, "Current domain:", -1 /* HOISTED */)
-const _hoisted_18 = { class: "control" }
-const _hoisted_19 = { class: "field" }
-const _hoisted_20 = { class: "label" }
-const _hoisted_21 = { class: "control" }
-const _hoisted_22 = { class: "field has-addons" }
-const _hoisted_23 = /*#__PURE__*/createBaseVNode("div", { class: "control" }, [
-  /*#__PURE__*/createBaseVNode("button", { class: "button" }, "Length:")
-], -1 /* HOISTED */)
-const _hoisted_24 = { class: "control is-fullwidth" }
-const _hoisted_25 = { class: "field has-addons is-expanded" }
-const _hoisted_26 = { class: "control" }
-const _hoisted_27 = { class: "control" }
-const _hoisted_28 = { class: "control" }
-const _hoisted_29 = { class: "control" }
-const _hoisted_30 = { class: "field" }
-const _hoisted_31 = ["disabled"]
-const _hoisted_32 = {
-  key: 0,
-  style: {"color":"red"},
-  class: "field"
-}
-const _hoisted_33 = { key: 0 }
-const _hoisted_34 = {
-  key: 2,
-  class: "box"
-}
-const _hoisted_35 = { class: "field" }
-const _hoisted_36 = { class: "label" }
-const _hoisted_37 = { class: "control" }
-const _hoisted_38 = ["type"]
-const _hoisted_39 = { class: "field" }
-const _hoisted_40 = { class: "buttons" }
+const _hoisted_8 = { key: 1 }
+const _hoisted_9 = { class: "field" }
+const _hoisted_10 = { class: "field columns is-centered" }
+const _hoisted_11 = { class: "column" }
 
-function CoreStartervue_type_template_id_463c45ea_render(_ctx, _cache, $props, $setup, $data, $options) {
+function CoreStartervue_type_template_id_af6717a6_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_EmojiChar = resolveComponent("EmojiChar")
+  const _component_PSMPwdgen = resolveComponent("PSMPwdgen")
 
   return (openBlock(), createElementBlock("div", null, [
     (!$options.started)
@@ -32734,191 +32689,57 @@ function CoreStartervue_type_template_id_463c45ea_render(_ctx, _cache, $props, $
           onSubmit: _cache[3] || (_cache[3] = withModifiers((...args) => ($options.start && $options.start(...args)), ["prevent"])),
           class: "box"
         }, [
-          CoreStartervue_type_template_id_463c45ea_hoisted_1,
-          createBaseVNode("div", CoreStartervue_type_template_id_463c45ea_hoisted_2, [
+          CoreStartervue_type_template_id_af6717a6_hoisted_1,
+          createBaseVNode("div", CoreStartervue_type_template_id_af6717a6_hoisted_2, [
             withDirectives(createBaseVNode("textarea", {
-              class: "textarea",
+              class: "form-control form-control-sm",
               "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.seedfile) = $event)),
-              style: {"width":"50vw","height":"10em"}
+              style: {"height":"10em"}
             }, null, 512 /* NEED_PATCH */), [
               [vModelText, $data.seedfile]
             ])
           ]),
-          createBaseVNode("div", CoreStartervue_type_template_id_463c45ea_hoisted_3, [
+          createBaseVNode("div", CoreStartervue_type_template_id_af6717a6_hoisted_3, [
             _hoisted_4,
-            createBaseVNode("div", _hoisted_5, [
-              createBaseVNode("label", _hoisted_6, [
-                createBaseVNode("input", {
-                  class: "file-input",
-                  type: "file",
-                  onChange: _cache[1] || (_cache[1] = (...args) => ($options.read_file && $options.read_file(...args)))
-                }, null, 32 /* NEED_HYDRATION */),
-                _hoisted_7
-              ])
+            createBaseVNode("input", {
+              class: "form-control",
+              type: "file",
+              id: "formFile",
+              onChange: _cache[1] || (_cache[1] = (...args) => ($options.read_file && $options.read_file(...args)))
+            }, null, 32 /* NEED_HYDRATION */)
+          ]),
+          createBaseVNode("div", _hoisted_5, [
+            _hoisted_6,
+            withDirectives(createBaseVNode("input", {
+              class: "form-control",
+              type: "password",
+              "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.password) = $event))
+            }, null, 512 /* NEED_PATCH */), [
+              [vModelText, $data.password]
             ])
           ]),
-          createBaseVNode("div", _hoisted_8, [
-            _hoisted_9,
-            createBaseVNode("div", _hoisted_10, [
-              withDirectives(createBaseVNode("input", {
-                class: "input",
-                type: "password",
-                "onUpdate:modelValue": _cache[2] || (_cache[2] = $event => (($data.password) = $event))
-              }, null, 512 /* NEED_PATCH */), [
-                [vModelText, $data.password]
-              ])
-            ])
-          ]),
-          _hoisted_11
+          _hoisted_7
         ], 32 /* NEED_HYDRATION */))
-      : (openBlock(), createElementBlock("div", _hoisted_12, [
-          createBaseVNode("div", _hoisted_13, [
+      : (openBlock(), createElementBlock("div", _hoisted_8, [
+          createBaseVNode("div", _hoisted_9, [
             createTextVNode(" Slate ready to use. "),
             createBaseVNode("a", {
               href: "#",
               onClick: _cache[4] || (_cache[4] = (...args) => ($options.stop && $options.stop(...args)))
             }, "Restart")
           ]),
-          createBaseVNode("div", _hoisted_14, [
-            createBaseVNode("div", _hoisted_15, [
+          createBaseVNode("div", _hoisted_10, [
+            createBaseVNode("div", _hoisted_11, [
               (openBlock(true), createElementBlock(runtime_core_esm_bundler_Fragment, null, renderList($options.coretest_human, (v) => {
                 return (openBlock(), createBlock(_component_EmojiChar, { number: v }, null, 8 /* PROPS */, ["number"]))
               }), 256 /* UNKEYED_FRAGMENT */))
             ])
           ]),
-          createBaseVNode("div", _hoisted_16, [
-            _hoisted_17,
-            createBaseVNode("div", _hoisted_18, [
-              withDirectives(createBaseVNode("input", {
-                class: "input is-family-monospace has-background-primary-light",
-                type: "text",
-                "onUpdate:modelValue": _cache[5] || (_cache[5] = $event => (($data.current_domain) = $event)),
-                readonly: ""
-              }, null, 512 /* NEED_PATCH */), [
-                [vModelText, $data.current_domain]
-              ])
-            ])
-          ]),
-          createBaseVNode("div", _hoisted_19, [
-            createBaseVNode("label", _hoisted_20, [
-              createTextVNode(" Password Request URL: "),
-              createBaseVNode("a", {
-                href: "#",
-                onClick: _cache[6] || (_cache[6] = withModifiers((...args) => ($options.on_create && $options.on_create(...args)), ["prevent"]))
-              }, "Generate"),
-              createTextVNode(" | "),
-              createBaseVNode("a", {
-                href: "#",
-                onClick: _cache[7] || (_cache[7] = withModifiers((...args) => ($options.on_paste && $options.on_paste(...args)), ["prevent"]))
-              }, "Paste")
-            ]),
-            createBaseVNode("div", _hoisted_21, [
-              withDirectives(createBaseVNode("input", {
-                class: "input is-family-monospace",
-                type: "text",
-                "onUpdate:modelValue": _cache[8] || (_cache[8] = $event => (($data.derive_from_url) = $event)),
-                placeholder: "psm-pwdgen://",
-                onClick: _cache[9] || (_cache[9] = $event => ($event.target.select()))
-              }, null, 512 /* NEED_PATCH */), [
-                [vModelText, $data.derive_from_url]
-              ])
-            ])
-          ]),
-          createBaseVNode("div", _hoisted_22, [
-            _hoisted_23,
-            createBaseVNode("div", _hoisted_24, [
-              withDirectives(createBaseVNode("input", {
-                class: "input is-family-monospace",
-                type: "number",
-                "onUpdate:modelValue": _cache[10] || (_cache[10] = $event => (($data.derive_option_length) = $event)),
-                min: "6",
-                max: "256"
-              }, null, 512 /* NEED_PATCH */), [
-                [vModelText, $data.derive_option_length]
-              ])
-            ])
-          ]),
-          createBaseVNode("div", _hoisted_25, [
-            createBaseVNode("div", _hoisted_26, [
-              createBaseVNode("button", {
-                class: shared_esm_bundler_normalizeClass(["button", {'is-primary':$data.derive_option_upper}]),
-                onClick: _cache[11] || (_cache[11] = $event => ($data.derive_option_upper=!$data.derive_option_upper))
-              }, "Upper", 2 /* CLASS */)
-            ]),
-            createBaseVNode("div", _hoisted_27, [
-              createBaseVNode("button", {
-                class: shared_esm_bundler_normalizeClass(["button", {'is-primary':$data.derive_option_lower}]),
-                onClick: _cache[12] || (_cache[12] = $event => ($data.derive_option_lower=!$data.derive_option_lower))
-              }, "Lower", 2 /* CLASS */)
-            ]),
-            createBaseVNode("div", _hoisted_28, [
-              createBaseVNode("button", {
-                class: shared_esm_bundler_normalizeClass(["button", {'is-primary':$data.derive_option_number}]),
-                onClick: _cache[13] || (_cache[13] = $event => ($data.derive_option_number=!$data.derive_option_number))
-              }, "Num", 2 /* CLASS */)
-            ]),
-            createBaseVNode("div", _hoisted_29, [
-              createBaseVNode("button", {
-                class: shared_esm_bundler_normalizeClass(["button", {'is-primary':$data.derive_option_special}]),
-                onClick: _cache[14] || (_cache[14] = $event => ($data.derive_option_special=!$data.derive_option_special))
-              }, "Spec", 2 /* CLASS */)
-            ])
-          ]),
-          createBaseVNode("div", _hoisted_30, [
-            createBaseVNode("button", {
-              class: "button is-primary",
-              onClick: _cache[15] || (_cache[15] = (...args) => ($options.on_derive && $options.on_derive(...args))),
-              disabled: !$options.can_derive_password
-            }, "Derive", 8 /* PROPS */, _hoisted_31)
-          ]),
-          ($data.derive_password_error || !$options.current_domain_matched)
-            ? (openBlock(), createElementBlock("div", _hoisted_32, [
-                (!$options.current_domain_matched)
-                  ? (openBlock(), createElementBlock("span", _hoisted_33, " Password URL not for current domain. Deriving not allowed. "))
-                  : createCommentVNode("v-if", true),
-                createBaseVNode("span", null, toDisplayString($data.derive_password_error), 1 /* TEXT */)
-              ]))
-            : createCommentVNode("v-if", true)
-        ])),
-    ($data.derived_password_from_url)
-      ? (openBlock(), createElementBlock("div", _hoisted_34, [
-          createBaseVNode("div", _hoisted_35, [
-            createBaseVNode("label", _hoisted_36, [
-              createTextVNode(" Result:   "),
-              createBaseVNode("a", {
-                href: "#",
-                onClick: _cache[16] || (_cache[16] = withModifiers($event => ($data.reveal_derived_password=!$data.reveal_derived_password), ["prevent"]))
-              }, toDisplayString($data.reveal_derived_password ? 'Hide':'Show'), 1 /* TEXT */)
-            ]),
-            createBaseVNode("div", _hoisted_37, [
-              withDirectives(createBaseVNode("input", {
-                class: "input is-family-monospace",
-                type: $data.reveal_derived_password?'text':'password',
-                "onUpdate:modelValue": _cache[17] || (_cache[17] = $event => (($data.derived_password_from_url) = $event)),
-                readonly: "",
-                onClick: _cache[18] || (_cache[18] = $event => ($event.target.select()))
-              }, null, 8 /* PROPS */, _hoisted_38), [
-                [vModelDynamic, $data.derived_password_from_url]
-              ])
-            ])
-          ]),
-          createBaseVNode("div", _hoisted_39, [
-            createBaseVNode("div", _hoisted_40, [
-              createBaseVNode("button", {
-                class: "button is-primary",
-                onClick: _cache[19] || (_cache[19] = (...args) => ($options.on_result_copy && $options.on_result_copy(...args)))
-              }, "Copy"),
-              createBaseVNode("button", {
-                class: "button is-danger",
-                onClick: _cache[20] || (_cache[20] = (...args) => ($options.clear_output && $options.clear_output(...args)))
-              }, "Clear")
-            ])
-          ])
+          createVNode(_component_PSMPwdgen)
         ]))
-      : createCommentVNode("v-if", true)
   ]))
 }
-;// CONCATENATED MODULE: ./src/vue/options/CoreStarter.vue?vue&type=template&id=463c45ea
+;// CONCATENATED MODULE: ./src/vue/options/CoreStarter.vue?vue&type=template&id=af6717a6
 
 // EXTERNAL MODULE: ./node_modules/.pnpm/url-parse@1.5.10/node_modules/url-parse/index.js
 var url_parse = __webpack_require__(732);
@@ -33220,19 +33041,410 @@ var exportHelper = __webpack_require__(451);
 const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(EmojiCharvue_type_script_lang_js, [['render',EmojiCharvue_type_template_id_3f4ff912_render]])
 
 /* harmony default export */ const EmojiChar = (__exports__);
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/PSMPwdgen.vue?vue&type=template&id=3cbf3373
+
+
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_1 = { class: "box" }
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_2 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_3 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Current domain:", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_4 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, " Password Request URL: ", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_5 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_6 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_7 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Length:", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_8 = { class: "" }
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_9 = ["disabled"]
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_10 = {
+  key: 0,
+  style: {"color":"red"},
+  class: "field"
+}
+const PSMPwdgenvue_type_template_id_3cbf3373_hoisted_11 = { key: 0 }
+const _hoisted_12 = {
+  key: 0,
+  class: "mb-2"
+}
+const _hoisted_13 = { class: "field" }
+const _hoisted_14 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, " Result: ", -1 /* HOISTED */)
+const _hoisted_15 = { class: "mb-1 input-group-sm input-group" }
+const _hoisted_16 = ["type"]
+const _hoisted_17 = { class: "field" }
+const _hoisted_18 = { class: "buttons" }
+
+function PSMPwdgenvue_type_template_id_3cbf3373_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (openBlock(), createElementBlock("div", null, [
+    createBaseVNode("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_1, [
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_2, [
+        PSMPwdgenvue_type_template_id_3cbf3373_hoisted_3,
+        withDirectives(createBaseVNode("input", {
+          class: "form-control text-monospace bg-secondary",
+          type: "text",
+          "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.current_domain) = $event)),
+          readonly: ""
+        }, null, 512 /* NEED_PATCH */), [
+          [vModelText, $data.current_domain]
+        ])
+      ]),
+      PSMPwdgenvue_type_template_id_3cbf3373_hoisted_4,
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_5, [
+        withDirectives(createBaseVNode("input", {
+          class: "form-control text-monospace",
+          type: "text",
+          "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (($data.derive_from_url) = $event)),
+          placeholder: "psm-pwdgen://",
+          onClick: _cache[2] || (_cache[2] = $event => ($event.target.select()))
+        }, null, 512 /* NEED_PATCH */), [
+          [vModelText, $data.derive_from_url]
+        ]),
+        createBaseVNode("a", {
+          href: "#",
+          class: "btn btn-outline-secondary",
+          onClick: _cache[3] || (_cache[3] = withModifiers((...args) => ($options.on_create && $options.on_create(...args)), ["prevent"]))
+        }, "New"),
+        createBaseVNode("a", {
+          href: "#",
+          class: "btn btn-outline-secondary",
+          onClick: _cache[4] || (_cache[4] = withModifiers((...args) => ($options.on_paste && $options.on_paste(...args)), ["prevent"]))
+        }, "Paste")
+      ]),
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_6, [
+        PSMPwdgenvue_type_template_id_3cbf3373_hoisted_7,
+        withDirectives(createBaseVNode("input", {
+          class: "form-control text-monospace",
+          type: "number",
+          "onUpdate:modelValue": _cache[5] || (_cache[5] = $event => (($data.derive_option_length) = $event)),
+          min: "6",
+          max: "256"
+        }, null, 512 /* NEED_PATCH */), [
+          [vModelText, $data.derive_option_length]
+        ]),
+        createBaseVNode("button", {
+          class: shared_esm_bundler_normalizeClass(["btn", {
+                    'btn-primary':$data.derive_option_upper,
+                    'btn-outline-secondary':!$data.derive_option_upper
+                }]),
+          onClick: _cache[6] || (_cache[6] = $event => ($data.derive_option_upper=!$data.derive_option_upper))
+        }, "Upper", 2 /* CLASS */),
+        createBaseVNode("button", {
+          class: shared_esm_bundler_normalizeClass(["btn", {
+                    'btn-primary':$data.derive_option_lower,
+                    'btn-outline-secondary':!$data.derive_option_lower
+                }]),
+          onClick: _cache[7] || (_cache[7] = $event => ($data.derive_option_lower=!$data.derive_option_lower))
+        }, "Lower", 2 /* CLASS */),
+        createBaseVNode("button", {
+          class: shared_esm_bundler_normalizeClass(["btn", {
+                    'btn-primary':$data.derive_option_number,
+                    'btn-outline-secondary':!$data.derive_option_number
+                }]),
+          onClick: _cache[8] || (_cache[8] = $event => ($data.derive_option_number=!$data.derive_option_number))
+        }, "Num", 2 /* CLASS */),
+        createBaseVNode("button", {
+          class: shared_esm_bundler_normalizeClass(["btn", {
+                    'btn-primary':$data.derive_option_special,
+                    'btn-outline-secondary':!$data.derive_option_special
+                }]),
+          onClick: _cache[9] || (_cache[9] = $event => ($data.derive_option_special=!$data.derive_option_special))
+        }, "Spec", 2 /* CLASS */)
+      ]),
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_8, [
+        createBaseVNode("button", {
+          class: "btn btn-sm btn-primary",
+          onClick: _cache[10] || (_cache[10] = (...args) => ($options.on_derive && $options.on_derive(...args))),
+          disabled: !$options.can_derive_password
+        }, "Derive", 8 /* PROPS */, PSMPwdgenvue_type_template_id_3cbf3373_hoisted_9)
+      ]),
+      ($data.derive_password_error || !$options.current_domain_matched)
+        ? (openBlock(), createElementBlock("div", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_10, [
+            (!$options.current_domain_matched)
+              ? (openBlock(), createElementBlock("span", PSMPwdgenvue_type_template_id_3cbf3373_hoisted_11, " Password URL not for current domain. Deriving not allowed. "))
+              : createCommentVNode("v-if", true),
+            createBaseVNode("span", null, toDisplayString($data.derive_password_error), 1 /* TEXT */)
+          ]))
+        : createCommentVNode("v-if", true)
+    ]),
+    ($data.derived_password_from_url)
+      ? (openBlock(), createElementBlock("div", _hoisted_12, [
+          createBaseVNode("div", _hoisted_13, [
+            _hoisted_14,
+            createBaseVNode("div", _hoisted_15, [
+              withDirectives(createBaseVNode("input", {
+                class: "form-control form-control-sm text-monospace",
+                type: $data.reveal_derived_password?'text':'password',
+                "onUpdate:modelValue": _cache[11] || (_cache[11] = $event => (($data.derived_password_from_url) = $event)),
+                readonly: "",
+                onClick: _cache[12] || (_cache[12] = $event => ($event.target.select()))
+              }, null, 8 /* PROPS */, _hoisted_16), [
+                [vModelDynamic, $data.derived_password_from_url]
+              ]),
+              createBaseVNode("button", {
+                class: "btn btn-primary",
+                onClick: _cache[13] || (_cache[13] = withModifiers($event => ($data.reveal_derived_password=!$data.reveal_derived_password), ["prevent"]))
+              }, toDisplayString($data.reveal_derived_password ? 'Hide':'Show'), 1 /* TEXT */)
+            ])
+          ]),
+          createBaseVNode("div", _hoisted_17, [
+            createBaseVNode("div", _hoisted_18, [
+              createBaseVNode("button", {
+                class: "btn btn-primary btn-sm",
+                onClick: _cache[14] || (_cache[14] = (...args) => ($options.on_result_copy && $options.on_result_copy(...args)))
+              }, "Copy"),
+              createBaseVNode("button", {
+                class: "btn btn-danger btn-sm ms-1",
+                onClick: _cache[15] || (_cache[15] = (...args) => ($options.clear_output && $options.clear_output(...args)))
+              }, "Clear")
+            ])
+          ])
+        ]))
+      : createCommentVNode("v-if", true)
+  ]))
+}
+;// CONCATENATED MODULE: ./src/vue/options/PSMPwdgen.vue?vue&type=template&id=3cbf3373
+
+;// CONCATENATED MODULE: ./src/vue/options/psm_instance.js
+const psm = __webpack_require__(39);
+
+var psm_instance = null;
+
+async function init_with_core(core){
+    const PSM = psm.init((e)=>core.digest(e));
+    psm_instance = new PSM("default");
+}
+
+function get_pwdgen(){
+    if(!psm_instance) throw Error();
+    return psm_instance.get_password_generator();
+}
+
+function destroy_core(){
+    psm_instance = null;
+}
+
+
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/PSMPwdgen.vue?vue&type=script&lang=js
+
+
+
+
+
+
+
+const channel_update_password = new BroadcastChannel("slate/update-password");
+const PSMPwdgenvue_type_script_lang_js_channel_push_password   = new BroadcastChannel("slate/push-password");
+
+
+function readfile(event) {
+    let input = event.target;
+    let reader = new FileReader();
+    return new Promise((resolve, reject)=>{
+        reader.onload = function() {
+            resolve(reader.result);
+        };
+        reader.onerror=reject;
+        reader.readAsText(input.files[0]);
+    });
+}
+
+function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
+    let queryOptions = { active: true, lastFocusedWindow: true };
+    browser.tabs.query(queryOptions, ([tab]) => {
+        let url_parsed = new URL(tab.url);
+        if(
+            !url_parsed ||
+            !lodash_default().includes(["http:", "https:"], url_parsed.protocol)
+        ){
+            this.current_domain = "";
+            return;
+        }
+        if(this.current_domain.toString() != url_parsed.hostname){
+            this.current_domain = url_parsed.hostname;
+        }
+    });
+}
+
+/* harmony default export */ const PSMPwdgenvue_type_script_lang_js = ({
+
+    mounted(){
+        browser.tabs.onActivated.addListener(()=>{
+            PSMPwdgenvue_type_script_lang_js_get_current_tab.call(this);
+        });
+        browser.tabs.onUpdated.addListener(()=>{
+            PSMPwdgenvue_type_script_lang_js_get_current_tab.call(this);
+        });
+        PSMPwdgenvue_type_script_lang_js_get_current_tab.call(this);
+
+        PSMPwdgenvue_type_script_lang_js_channel_push_password.onmessage = (event)=>{
+            this.broadcast_result();
+        }
+    },
+
+    data(){ return {
+        core_test: null,
+
+        derive_from_url: "",
+        derived_password_from_url: "",
+        derive_password_error: "",
+        reveal_derived_password: false,
+
+        derive_option_length: 20,
+        derive_option_upper: true,
+        derive_option_lower: true,
+        derive_option_number: true,
+        derive_option_special: false,
+
+        current_domain: "",
+        deriving_url_required_domain: "",
+
+
+///////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////
+    }},
+
+    computed: {
+        current_domain_matched(){
+            return this.deriving_url_required_domain == this.current_domain;
+        },
+
+        can_derive_password(){
+            if(!this.current_domain_matched) return false;
+            if(
+                !this.derive_option_upper &&
+                !this.derive_option_lower &&
+                !this.derive_option_number &&
+                !this.derive_option_special
+            ){
+                return false;
+            }   
+            return true;
+        },
+    },
+
+    watch: {
+
+        current_domain_matched(){
+            if(!this.current_domain_matched){
+                this.clear_output();
+            }
+        },
+
+        derive_from_url(){
+            let url_p = url_parse_default()(this.derive_from_url);
+            if(!url_p || !lodash_default().startsWith(url_p.protocol, "psm-")) return;
+
+            let qs = lodash_default().get(url_p, 'query') || "";
+            let qsp = new URLSearchParams(qs);
+            
+            this.deriving_url_required_domain = lodash_default().get(url_p, "hostname");
+            this.derive_option_length = lodash_default().parseInt(qsp.get("length"));
+            this.derive_option_upper = !lodash_default().isNil(qsp.get("upper"));
+            this.derive_option_lower = !lodash_default().isNil(qsp.get("lower"));
+            this.derive_option_number = !lodash_default().isNil(qsp.get("number"));
+            this.derive_option_special = !lodash_default().isNil(qsp.get("special"));          
+        },
+
+        derive_option_length(){ this.rewrite_derive_option() },
+        derive_option_upper(){ this.rewrite_derive_option() },
+        derive_option_lower(){ this.rewrite_derive_option() },
+        derive_option_number(){ this.rewrite_derive_option() },
+        derive_option_special(){ this.rewrite_derive_option() },
+
+        derived_password_from_url(){ this.broadcast_result() },
+    },
+
+    methods: {
+        broadcast_result(){
+            channel_update_password.postMessage({
+                password: this.derived_password_from_url.toString(),
+                domain: this.current_domain.toString(),
+            });
+        },
+
+        clear_output(){
+            this.derived_password_from_url = "";
+            this.derive_password_error = "";
+            this.reveal_derived_password = false;
+        },
+
+        rewrite_derive_option(){
+            let url_p = url_parse_default()(this.derive_from_url);
+            if(!url_p || !lodash_default().startsWith(url_p.protocol, "psm-")) return;
+            this.clear_output();
+
+            let qs = "?length=" + this.derive_option_length;
+            for(let i of ["upper", "lower", "number", "special"]){
+                if(!this["derive_option_"+i]) continue;
+                qs += "&" + i;
+            }
+            
+            url_p.query = qs;
+            this.derive_from_url = url_p.toString();
+        },
+
+        async on_derive(){
+            this.clear_output();
+            let pwdgen = get_pwdgen();
+
+            let url = this.derive_from_url.toString();
+            try{
+                let password = await pwdgen.get_password(url);
+                this.derived_password_from_url = password;
+                this.broadcast_result();
+            } catch(e){
+                this.derive_password_error = e.message;
+                this.clear_output();
+            }
+        },
+
+        async on_create(){
+            let pwdgen = get_pwdgen();
+            this.derive_from_url = await pwdgen.create_url(
+                this.current_domain);
+            this.on_derive();
+        },
+
+        async on_paste(){
+            let text = await navigator.clipboard.readText();
+            this.derive_from_url = text;
+        },
+
+        async on_result_copy(){
+            try{
+                await navigator.clipboard.writeText(
+                    this.derived_password_from_url);
+            } catch(e){
+                alert("Failed writing password to clipboard.");
+            }
+        },
+    },
+
+    components: {
+        EmojiChar: EmojiChar,
+    }
+});
+
+;// CONCATENATED MODULE: ./src/vue/options/PSMPwdgen.vue?vue&type=script&lang=js
+ 
+;// CONCATENATED MODULE: ./src/vue/options/PSMPwdgen.vue
+
+
+
+
+;
+const PSMPwdgen_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(PSMPwdgenvue_type_script_lang_js, [['render',PSMPwdgenvue_type_template_id_3cbf3373_render]])
+
+/* harmony default export */ const PSMPwdgen = (PSMPwdgen_exports_);
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=script&lang=js
 
 
 
 
 
-const psm = __webpack_require__(39);
-
-const channel_update_password = new BroadcastChannel("slate/update-password");
-const channel_push_password   = new BroadcastChannel("slate/push-password");
 
 
-function readfile(event) {
+
+
+
+function CoreStartervue_type_script_lang_js_readfile(event) {
   	let input = event.target;
   	let reader = new FileReader();
   	return new Promise((resolve, reject)=>{
@@ -33244,24 +33456,7 @@ function readfile(event) {
  	});
 }
 
-function get_current_tab(){
-	let queryOptions = { active: true, lastFocusedWindow: true };
-    browser.tabs.query(queryOptions, ([tab]) => {
-    	let url_parsed = new URL(tab.url);
-    	if(
-    		!url_parsed ||
-    		!lodash_default().includes(["http:", "https:"], url_parsed.protocol)
-    	){
-    		this.current_domain = "";
-    		return;
-    	}
-    	if(this.current_domain.toString() != url_parsed.hostname){
-    		this.current_domain = url_parsed.hostname;
-    	}
-    });
-}
 
-var psm_instance = null;
 
 /* harmony default export */ const CoreStartervue_type_script_lang_js = ({
 	mounted(){
@@ -33284,20 +33479,6 @@ var psm_instance = null;
 		core: null,
 		core_test: null,
 
-		derive_from_url: "",
-		derived_password_from_url: "",
-		derive_password_error: "",
-		reveal_derived_password: false,
-
-		derive_option_length: 20,
-		derive_option_upper: true,
-		derive_option_lower: true,
-		derive_option_number: true,
-		derive_option_special: false,
-
-		current_domain: "",
-		deriving_url_required_domain: "",
-
 
 /////////////
 /////////////////////
@@ -33307,81 +33488,29 @@ var psm_instance = null;
 	}},
 
 	computed: {
-		started(){
-			return this.core != null;
-		},
+        started(){
+            return this.core != null;
+        },
 
-		current_domain_matched(){
-			return this.deriving_url_required_domain == this.current_domain;
-		},
-
-		coretest_human(){
-			if(!this.core_test || !this.core_test.buffer) return [];
-			let u16n = new Uint16Array(this.core_test.buffer);
-			let k = 0, ret = [];
-			for(let i=0; i<5; i++){
-				k = (k + u16n[i]) % 719;
-				ret.push(k);
-			}
-			return ret;
-		},
-
-		can_derive_password(){
-			if(!this.current_domain_matched) return false;
-			if(
-				!this.derive_option_upper &&
-				!this.derive_option_lower &&
-				!this.derive_option_number &&
-				!this.derive_option_special
-			){
-				return false;
-			}	
-			return true;
-		},
-	},
+        coretest_human(){
+            if(!this.core_test || !this.core_test.buffer) return [];
+            let u16n = new Uint16Array(this.core_test.buffer);
+            let k = 0, ret = [];
+            for(let i=0; i<5; i++){
+                k = (k + u16n[i]) % 719;
+                ret.push(k);
+            }
+            return ret;
+        },
+    },
 
 	watch: {
 		started(){
 			this.$emit("started", this.started);
 		},
-
-		current_domain_matched(){
-			if(!this.current_domain_matched){
-				this.clear_output();
-			}
-		},
-
-		derive_from_url(){
-			let url_p = url_parse_default()(this.derive_from_url);
-			if(!url_p || !lodash_default().startsWith(url_p.protocol, "psm-")) return;
-
-			let qs = lodash_default().get(url_p, 'query') || "";
-			let qsp = new URLSearchParams(qs);
-			
-			this.deriving_url_required_domain = lodash_default().get(url_p, "hostname");
-			this.derive_option_length = lodash_default().parseInt(qsp.get("length"));
-			this.derive_option_upper = !lodash_default().isNil(qsp.get("upper"));
-			this.derive_option_lower = !lodash_default().isNil(qsp.get("lower"));
-			this.derive_option_number = !lodash_default().isNil(qsp.get("number"));
-			this.derive_option_special = !lodash_default().isNil(qsp.get("special"));			
-		},
-
-		derive_option_length(){ this.rewrite_derive_option() },
-		derive_option_upper(){ this.rewrite_derive_option() },
-		derive_option_lower(){ this.rewrite_derive_option() },
-		derive_option_number(){ this.rewrite_derive_option() },
-		derive_option_special(){ this.rewrite_derive_option() },
-
-		derived_password_from_url(){ this.broadcast_result() },
 	},
 
 	methods: {
-		broadcast_result(){
-			channel_update_password.postMessage({
-				password: this.derived_password_from_url.toString(),
-				domain: this.current_domain.toString(),
-			});
-		},
 
 		clear_output(){
 			this.derived_password_from_url = "";
@@ -33389,33 +33518,16 @@ var psm_instance = null;
 			this.reveal_derived_password = false;
 		},
 
-		rewrite_derive_option(){
-			let url_p = url_parse_default()(this.derive_from_url);
-			if(!url_p || !lodash_default().startsWith(url_p.protocol, "psm-")) return;
-			this.clear_output();
-
-			let qs = "?length=" + this.derive_option_length;
-			for(let i of ["upper", "lower", "number", "special"]){
-				if(!this["derive_option_"+i]) continue;
-				qs += "&" + i;
-			}
-			
-			url_p.query = qs;
-			this.derive_from_url = url_p.toString();
-		},
-
 		async read_file(e){
-			this.seedfile = await readfile(e);
+			this.seedfile = await CoreStartervue_type_script_lang_js_readfile(e);
 		},
 
 		async start(){
 			try{
 				let core = await open_seedfile(this.password, this.seedfile);
-				const PSM = psm.init((e)=>core.digest(e));
+				await init_with_core(core);
 				this.core = true;
 				this.core_test = await core.digest(new Uint8Array());
-
-				psm_instance = new PSM("default");
 
 				this.password = "";
 				this.seedfile = "";
@@ -33426,7 +33538,7 @@ var psm_instance = null;
 		},
 
 		async stop(){
-			psm_instance = null;
+			destroy_core();
 			this.password = "";
 			this.clear_output();
 			this.core = null;
@@ -33434,45 +33546,11 @@ var psm_instance = null;
 			window.reload();
 		},
 
-		async on_derive(){
-			this.clear_output();
-			let pwdgen = psm_instance.get_password_generator();
-
-			let url = this.derive_from_url.toString();
-			try{
-				let password = await pwdgen.get_password(url);
-				this.derived_password_from_url = password;
-				this.broadcast_result();
-			} catch(e){
-				this.derive_password_error = e.message;
-				this.clear_output();
-			}
-		},
-
-		async on_create(){
-			let pwdgen = psm_instance.get_password_generator();
-			this.derive_from_url = await pwdgen.create_url(
-				this.current_domain);
-			this.on_derive();
-		},
-
-		async on_paste(){
-			let text = await navigator.clipboard.readText();
-			this.derive_from_url = text;
-		},
-
-		async on_result_copy(){
-			try{
-				await navigator.clipboard.writeText(
-					this.derived_password_from_url);
-			} catch(e){
-				alert("Failed writing password to clipboard.");
-			}
-		},
 	},
 
 	components: {
 		EmojiChar: EmojiChar,
+		PSMPwdgen: PSMPwdgen,
 	}
 });
 
@@ -33484,65 +33562,59 @@ var psm_instance = null;
 
 
 ;
-const CoreStarter_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(CoreStartervue_type_script_lang_js, [['render',CoreStartervue_type_template_id_463c45ea_render]])
+const CoreStarter_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(CoreStartervue_type_script_lang_js, [['render',CoreStartervue_type_template_id_af6717a6_render]])
 
 /* harmony default export */ const CoreStarter = (CoreStarter_exports_);
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreGenerator.vue?vue&type=template&id=5c8462a3
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreSeedfileGenerator.vue?vue&type=template&id=949273f6
 
 
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_1 = { class: "box" }
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_2 = /*#__PURE__*/createBaseVNode("div", { class: "field" }, "... Or create a new seed file.", -1 /* HOISTED */)
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_3 = { class: "field" }
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_4 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, "Type in your password:", -1 /* HOISTED */)
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_5 = { class: "control" }
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_6 = { class: "field" }
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_7 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, "Repeat your password:", -1 /* HOISTED */)
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_8 = { class: "control" }
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_9 = { class: "field" }
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_10 = ["disabled"]
-const CoreGeneratorvue_type_template_id_5c8462a3_hoisted_11 = {
+const CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_1 = { class: "" }
+const CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_2 = /*#__PURE__*/createBaseVNode("div", { class: "mb-1" }, "... Or create a new seed file.", -1 /* HOISTED */)
+const CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_3 = { class: "mb-1 input-group-sm input-group" }
+const CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_4 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Your password:", -1 /* HOISTED */)
+const CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_5 = { class: "mb-1 input-group-sm input-group" }
+const CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_6 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Repeat password:", -1 /* HOISTED */)
+const CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_7 = { class: "mb-1 input-group-sm input-group" }
+const CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_8 = ["disabled"]
+const CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_9 = {
   key: 0,
-  class: "field"
+  class: "mb-1 input-group-sm input-group"
 }
 
-function CoreGeneratorvue_type_template_id_5c8462a3_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (openBlock(), createElementBlock("div", CoreGeneratorvue_type_template_id_5c8462a3_hoisted_1, [
-    CoreGeneratorvue_type_template_id_5c8462a3_hoisted_2,
-    createBaseVNode("div", CoreGeneratorvue_type_template_id_5c8462a3_hoisted_3, [
-      CoreGeneratorvue_type_template_id_5c8462a3_hoisted_4,
-      createBaseVNode("div", CoreGeneratorvue_type_template_id_5c8462a3_hoisted_5, [
-        withDirectives(createBaseVNode("input", {
-          class: "input",
-          type: "password",
-          "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.password) = $event))
-        }, null, 512 /* NEED_PATCH */), [
-          [vModelText, $data.password]
-        ])
+function CoreSeedfileGeneratorvue_type_template_id_949273f6_render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (openBlock(), createElementBlock("div", CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_1, [
+    CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_2,
+    createBaseVNode("div", CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_3, [
+      CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_4,
+      withDirectives(createBaseVNode("input", {
+        class: "form-control",
+        type: "password",
+        "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.password) = $event))
+      }, null, 512 /* NEED_PATCH */), [
+        [vModelText, $data.password]
       ])
     ]),
-    createBaseVNode("div", CoreGeneratorvue_type_template_id_5c8462a3_hoisted_6, [
-      CoreGeneratorvue_type_template_id_5c8462a3_hoisted_7,
-      createBaseVNode("div", CoreGeneratorvue_type_template_id_5c8462a3_hoisted_8, [
-        withDirectives(createBaseVNode("input", {
-          class: "input",
-          type: "password",
-          "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (($data.password2) = $event))
-        }, null, 512 /* NEED_PATCH */), [
-          [vModelText, $data.password2]
-        ])
+    createBaseVNode("div", CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_5, [
+      CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_6,
+      withDirectives(createBaseVNode("input", {
+        class: "form-control",
+        type: "password",
+        "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (($data.password2) = $event))
+      }, null, 512 /* NEED_PATCH */), [
+        [vModelText, $data.password2]
       ])
     ]),
-    createBaseVNode("div", CoreGeneratorvue_type_template_id_5c8462a3_hoisted_9, [
+    createBaseVNode("div", CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_7, [
       createBaseVNode("button", {
-        class: "button is-primary",
+        class: "btn btn-primary",
         onClick: _cache[2] || (_cache[2] = (...args) => ($options.create && $options.create(...args))),
         disabled: !$options.can_create
-      }, "Create", 8 /* PROPS */, CoreGeneratorvue_type_template_id_5c8462a3_hoisted_10)
+      }, "Create", 8 /* PROPS */, CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_8)
     ]),
     ($data.result)
-      ? (openBlock(), createElementBlock("div", CoreGeneratorvue_type_template_id_5c8462a3_hoisted_11, [
+      ? (openBlock(), createElementBlock("div", CoreSeedfileGeneratorvue_type_template_id_949273f6_hoisted_9, [
           withDirectives(createBaseVNode("textarea", {
-            class: "textarea",
+            class: "form-control form-control-sm",
             readonly: "",
             "onUpdate:modelValue": _cache[3] || (_cache[3] = $event => (($data.result) = $event)),
             style: {"width":"50vw","height":"20em"}
@@ -33553,14 +33625,14 @@ function CoreGeneratorvue_type_template_id_5c8462a3_render(_ctx, _cache, $props,
       : createCommentVNode("v-if", true)
   ]))
 }
-;// CONCATENATED MODULE: ./src/vue/options/CoreGenerator.vue?vue&type=template&id=5c8462a3
+;// CONCATENATED MODULE: ./src/vue/options/CoreSeedfileGenerator.vue?vue&type=template&id=949273f6
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreGenerator.vue?vue&type=script&lang=js
-
-
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreSeedfileGenerator.vue?vue&type=script&lang=js
 
 
-/* harmony default export */ const CoreGeneratorvue_type_script_lang_js = ({
+
+
+/* harmony default export */ const CoreSeedfileGeneratorvue_type_script_lang_js = ({
 	data(){ return {
 		password: "",
 		password2: "",
@@ -33586,17 +33658,17 @@ function CoreGeneratorvue_type_template_id_5c8462a3_render(_ctx, _cache, $props,
 	}
 });
 
-;// CONCATENATED MODULE: ./src/vue/options/CoreGenerator.vue?vue&type=script&lang=js
+;// CONCATENATED MODULE: ./src/vue/options/CoreSeedfileGenerator.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./src/vue/options/CoreGenerator.vue
+;// CONCATENATED MODULE: ./src/vue/options/CoreSeedfileGenerator.vue
 
 
 
 
 ;
-const CoreGenerator_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(CoreGeneratorvue_type_script_lang_js, [['render',CoreGeneratorvue_type_template_id_5c8462a3_render]])
+const CoreSeedfileGenerator_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(CoreSeedfileGeneratorvue_type_script_lang_js, [['render',CoreSeedfileGeneratorvue_type_template_id_949273f6_render]])
 
-/* harmony default export */ const CoreGenerator = (CoreGenerator_exports_);
+/* harmony default export */ const CoreSeedfileGenerator = (CoreSeedfileGenerator_exports_);
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/index.vue?vue&type=script&lang=js
 
 
@@ -33615,7 +33687,7 @@ const CoreGenerator_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(Core
 
 	components: {
 		CoreStarter: CoreStarter,
-		CoreGenerator: CoreGenerator,
+		CoreSeedfileGenerator: CoreSeedfileGenerator,
 	}
 });
 

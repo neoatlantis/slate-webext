@@ -1,4 +1,4 @@
-<template><div class="container" style="padding: 1em">
+<template><div class="container-fluid" style="padding: 0.5em">
 
 
 	<div>
@@ -7,7 +7,7 @@
 
 	<div v-if="!started">
 		<br />
-		<CoreGenerator></CoreGenerator>
+		<CoreSeedfileGenerator></CoreSeedfileGenerator>
 	</div>
 
 
@@ -15,7 +15,7 @@
 <script>
 import _ from "lodash";
 import CoreStarter from "./CoreStarter.vue";
-import CoreGenerator from "./CoreGenerator.vue";
+import CoreSeedfileGenerator from "./CoreSeedfileGenerator.vue";
 
 export default {
 	mounted(){
@@ -29,7 +29,7 @@ export default {
 
 	components: {
 		CoreStarter,
-		CoreGenerator,
+		CoreSeedfileGenerator,
 	}
 }
 </script>
