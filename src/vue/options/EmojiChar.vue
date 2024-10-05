@@ -24,6 +24,7 @@ export default {
                 width: size_x+"px",
                 height: size_y+"px",
                 background: `url('/static/emoji.png') ${-x}px ${-y}px`,
+                transform: 'scale(0.6)',
             }
         }
     }

@@ -35,14 +35,14 @@
 	<div v-else>
 
 		<div class="field">
-            Slate ready to use.
+            Slate ready to use. Icons below represent the loaded core, remember
+            them to make sure you've got the correct seedfile.
             <a href="#" @click.prevnet="stop">Restart</a>
         </div>
 
-		<div class="field columns is-centered">
-            <div class="column">
-                <EmojiChar v-for="v in coretest_human" :number="v"></EmojiChar>
-            </div>
+		
+        <div class="d-flex justify-content-center">
+            <EmojiChar v-for="v in coretest_human" :number="v"></EmojiChar>
         </div>
 
 		<PSMPwdgen></PSMPwdgen>

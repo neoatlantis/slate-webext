@@ -77,11 +77,11 @@
         </div>
 
         <div style="color:red" class="field" v-if="derive_password_error || !current_domain_matched">
-            <span v-if="!current_domain_matched">
+            <span v-if="derive_password_error">{{ derive_password_error }}</span>
+            <span v-else>
                 Password URL not for current domain. Deriving not allowed.
                 <a href="#" @click.prevent="override_current_domain_once=true">Override once (dangerous!).</a>
-            </span>
-            <span>{{ derive_password_error }}</span>
+            </span>            
         </div>
     </div>
 

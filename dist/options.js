@@ -32658,12 +32658,12 @@ const initDirectivesForSSR = () => {
 
 
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=template&id=d7c876a0
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=template&id=02021448
 
 
-const CoreStartervue_type_template_id_d7c876a0_hoisted_1 = /*#__PURE__*/createBaseVNode("div", { class: "mb-3" }, " To start redeeming password request urls, supply a seed file and its corresponding password to initialize. ", -1 /* HOISTED */)
-const CoreStartervue_type_template_id_d7c876a0_hoisted_2 = { class: "mb-1" }
-const CoreStartervue_type_template_id_d7c876a0_hoisted_3 = { class: "mb-1 input-group-sm input-group" }
+const CoreStartervue_type_template_id_02021448_hoisted_1 = /*#__PURE__*/createBaseVNode("div", { class: "mb-3" }, " To start redeeming password request urls, supply a seed file and its corresponding password to initialize. ", -1 /* HOISTED */)
+const CoreStartervue_type_template_id_02021448_hoisted_2 = { class: "mb-1" }
+const CoreStartervue_type_template_id_02021448_hoisted_3 = { class: "mb-1 input-group-sm input-group" }
 const _hoisted_4 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Or select a file...", -1 /* HOISTED */)
 const _hoisted_5 = { class: "mb-1 input-group-sm input-group" }
 const _hoisted_6 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Your password:", -1 /* HOISTED */)
@@ -32675,10 +32675,9 @@ const _hoisted_7 = /*#__PURE__*/createBaseVNode("div", { class: "mb-1" }, [
 ], -1 /* HOISTED */)
 const _hoisted_8 = { key: 1 }
 const _hoisted_9 = { class: "field" }
-const _hoisted_10 = { class: "field columns is-centered" }
-const _hoisted_11 = { class: "column" }
+const _hoisted_10 = { class: "d-flex justify-content-center" }
 
-function CoreStartervue_type_template_id_d7c876a0_render(_ctx, _cache, $props, $setup, $data, $options) {
+function CoreStartervue_type_template_id_02021448_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_EmojiChar = resolveComponent("EmojiChar")
   const _component_PSMPwdgen = resolveComponent("PSMPwdgen")
 
@@ -32689,8 +32688,8 @@ function CoreStartervue_type_template_id_d7c876a0_render(_ctx, _cache, $props, $
           onSubmit: _cache[3] || (_cache[3] = withModifiers((...args) => ($options.start && $options.start(...args)), ["prevent"])),
           class: "box"
         }, [
-          CoreStartervue_type_template_id_d7c876a0_hoisted_1,
-          createBaseVNode("div", CoreStartervue_type_template_id_d7c876a0_hoisted_2, [
+          CoreStartervue_type_template_id_02021448_hoisted_1,
+          createBaseVNode("div", CoreStartervue_type_template_id_02021448_hoisted_2, [
             withDirectives(createBaseVNode("textarea", {
               class: "form-control form-control-sm",
               "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => (($data.seedfile) = $event)),
@@ -32699,7 +32698,7 @@ function CoreStartervue_type_template_id_d7c876a0_render(_ctx, _cache, $props, $
               [vModelText, $data.seedfile]
             ])
           ]),
-          createBaseVNode("div", CoreStartervue_type_template_id_d7c876a0_hoisted_3, [
+          createBaseVNode("div", CoreStartervue_type_template_id_02021448_hoisted_3, [
             _hoisted_4,
             createBaseVNode("input", {
               class: "form-control",
@@ -32722,24 +32721,22 @@ function CoreStartervue_type_template_id_d7c876a0_render(_ctx, _cache, $props, $
         ], 32 /* NEED_HYDRATION */))
       : (openBlock(), createElementBlock("div", _hoisted_8, [
           createBaseVNode("div", _hoisted_9, [
-            createTextVNode(" Slate ready to use. "),
+            createTextVNode(" Slate ready to use. Icons below represent the loaded core, remember them to make sure you've got the correct seedfile. "),
             createBaseVNode("a", {
               href: "#",
               onClick: _cache[4] || (_cache[4] = (...args) => ($options.stop && $options.stop(...args)))
             }, "Restart")
           ]),
           createBaseVNode("div", _hoisted_10, [
-            createBaseVNode("div", _hoisted_11, [
-              (openBlock(true), createElementBlock(runtime_core_esm_bundler_Fragment, null, renderList($options.coretest_human, (v) => {
-                return (openBlock(), createBlock(_component_EmojiChar, { number: v }, null, 8 /* PROPS */, ["number"]))
-              }), 256 /* UNKEYED_FRAGMENT */))
-            ])
+            (openBlock(true), createElementBlock(runtime_core_esm_bundler_Fragment, null, renderList($options.coretest_human, (v) => {
+              return (openBlock(), createBlock(_component_EmojiChar, { number: v }, null, 8 /* PROPS */, ["number"]))
+            }), 256 /* UNKEYED_FRAGMENT */))
           ]),
           createVNode(_component_PSMPwdgen)
         ]))
   ]))
 }
-;// CONCATENATED MODULE: ./src/vue/options/CoreStarter.vue?vue&type=template&id=d7c876a0
+;// CONCATENATED MODULE: ./src/vue/options/CoreStarter.vue?vue&type=template&id=02021448
 
 // EXTERNAL MODULE: ./node_modules/.pnpm/url-parse@1.5.10/node_modules/url-parse/index.js
 var url_parse = __webpack_require__(732);
@@ -32993,10 +32990,10 @@ async function open_seedfile(password, seedfile_text){
 
 
 
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/EmojiChar.vue?vue&type=template&id=3f4ff912
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/EmojiChar.vue?vue&type=template&id=3d8ef1f6
 
 
-function EmojiCharvue_type_template_id_3f4ff912_render(_ctx, _cache, $props, $setup, $data, $options) {
+function EmojiCharvue_type_template_id_3d8ef1f6_render(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("div", {
     style: shared_esm_bundler_normalizeStyle($options.style)
   }, null, 4 /* STYLE */))
@@ -33023,6 +33020,7 @@ function EmojiCharvue_type_template_id_3f4ff912_render(_ctx, _cache, $props, $se
                 width: size_x+"px",
                 height: size_y+"px",
                 background: `url('/static/emoji.png') ${-x}px ${-y}px`,
+                transform: 'scale(0.6)',
             }
         }
     }
@@ -33038,43 +33036,44 @@ var exportHelper = __webpack_require__(451);
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(EmojiCharvue_type_script_lang_js, [['render',EmojiCharvue_type_template_id_3f4ff912_render]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(EmojiCharvue_type_script_lang_js, [['render',EmojiCharvue_type_template_id_3d8ef1f6_render]])
 
 /* harmony default export */ const EmojiChar = (__exports__);
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/PSMPwdgen.vue?vue&type=template&id=04507f14
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/PSMPwdgen.vue?vue&type=template&id=ecb2b314
 
 
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_1 = { class: "box" }
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_2 = { class: "mb-1 input-group-sm input-group" }
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_3 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Current domain:", -1 /* HOISTED */)
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_4 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, " Password Request URL: ", -1 /* HOISTED */)
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_5 = { class: "mb-1 input-group-sm input-group" }
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_6 = { class: "mb-1 input-group-sm input-group" }
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_7 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Length:", -1 /* HOISTED */)
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_8 = { class: "" }
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_9 = ["disabled"]
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_10 = {
+const PSMPwdgenvue_type_template_id_ecb2b314_hoisted_1 = { class: "box" }
+const PSMPwdgenvue_type_template_id_ecb2b314_hoisted_2 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_ecb2b314_hoisted_3 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Current domain:", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_ecb2b314_hoisted_4 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, " Password Request URL: ", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_ecb2b314_hoisted_5 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_ecb2b314_hoisted_6 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_ecb2b314_hoisted_7 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Length:", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_ecb2b314_hoisted_8 = { class: "" }
+const PSMPwdgenvue_type_template_id_ecb2b314_hoisted_9 = ["disabled"]
+const PSMPwdgenvue_type_template_id_ecb2b314_hoisted_10 = {
   key: 0,
   style: {"color":"red"},
   class: "field"
 }
-const PSMPwdgenvue_type_template_id_04507f14_hoisted_11 = { key: 0 }
-const _hoisted_12 = {
+const _hoisted_11 = { key: 0 }
+const _hoisted_12 = { key: 1 }
+const _hoisted_13 = {
   key: 0,
   class: "mb-2"
 }
-const _hoisted_13 = { class: "field" }
-const _hoisted_14 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, " Result: ", -1 /* HOISTED */)
-const _hoisted_15 = { class: "mb-1 input-group-sm input-group" }
-const _hoisted_16 = ["type"]
-const _hoisted_17 = { class: "field" }
-const _hoisted_18 = { class: "buttons" }
+const _hoisted_14 = { class: "field" }
+const _hoisted_15 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, " Result: ", -1 /* HOISTED */)
+const _hoisted_16 = { class: "mb-1 input-group-sm input-group" }
+const _hoisted_17 = ["type"]
+const _hoisted_18 = { class: "field" }
+const _hoisted_19 = { class: "buttons" }
 
-function PSMPwdgenvue_type_template_id_04507f14_render(_ctx, _cache, $props, $setup, $data, $options) {
+function PSMPwdgenvue_type_template_id_ecb2b314_render(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("div", null, [
-    createBaseVNode("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_1, [
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_2, [
-        PSMPwdgenvue_type_template_id_04507f14_hoisted_3,
+    createBaseVNode("div", PSMPwdgenvue_type_template_id_ecb2b314_hoisted_1, [
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_ecb2b314_hoisted_2, [
+        PSMPwdgenvue_type_template_id_ecb2b314_hoisted_3,
         withDirectives(createBaseVNode("input", {
           class: "form-control text-monospace bg-secondary text-white",
           type: "text",
@@ -33084,8 +33083,8 @@ function PSMPwdgenvue_type_template_id_04507f14_render(_ctx, _cache, $props, $se
           [vModelText, $data.current_domain]
         ])
       ]),
-      PSMPwdgenvue_type_template_id_04507f14_hoisted_4,
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_5, [
+      PSMPwdgenvue_type_template_id_ecb2b314_hoisted_4,
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_ecb2b314_hoisted_5, [
         createBaseVNode("a", {
           href: "#",
           class: "btn btn-outline-secondary",
@@ -33111,8 +33110,8 @@ function PSMPwdgenvue_type_template_id_04507f14_render(_ctx, _cache, $props, $se
           onClick: _cache[5] || (_cache[5] = withModifiers((...args) => ($options.on_url_copy && $options.on_url_copy(...args)), ["prevent"]))
         }, "Copy")
       ]),
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_6, [
-        PSMPwdgenvue_type_template_id_04507f14_hoisted_7,
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_ecb2b314_hoisted_6, [
+        PSMPwdgenvue_type_template_id_ecb2b314_hoisted_7,
         withDirectives(createBaseVNode("input", {
           class: "form-control text-monospace",
           type: "number",
@@ -33151,40 +33150,39 @@ function PSMPwdgenvue_type_template_id_04507f14_render(_ctx, _cache, $props, $se
           onClick: _cache[10] || (_cache[10] = $event => ($data.derive_option_special=!$data.derive_option_special))
         }, "@#$", 2 /* CLASS */)
       ]),
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_8, [
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_ecb2b314_hoisted_8, [
         createBaseVNode("button", {
           class: "btn btn-sm btn-primary",
           onClick: _cache[11] || (_cache[11] = (...args) => ($options.on_derive && $options.on_derive(...args))),
           disabled: !$options.can_derive_password
-        }, "Derive", 8 /* PROPS */, PSMPwdgenvue_type_template_id_04507f14_hoisted_9)
+        }, "Derive", 8 /* PROPS */, PSMPwdgenvue_type_template_id_ecb2b314_hoisted_9)
       ]),
       ($data.derive_password_error || !$options.current_domain_matched)
-        ? (openBlock(), createElementBlock("div", PSMPwdgenvue_type_template_id_04507f14_hoisted_10, [
-            (!$options.current_domain_matched)
-              ? (openBlock(), createElementBlock("span", PSMPwdgenvue_type_template_id_04507f14_hoisted_11, [
+        ? (openBlock(), createElementBlock("div", PSMPwdgenvue_type_template_id_ecb2b314_hoisted_10, [
+            ($data.derive_password_error)
+              ? (openBlock(), createElementBlock("span", _hoisted_11, toDisplayString($data.derive_password_error), 1 /* TEXT */))
+              : (openBlock(), createElementBlock("span", _hoisted_12, [
                   createTextVNode(" Password URL not for current domain. Deriving not allowed. "),
                   createBaseVNode("a", {
                     href: "#",
                     onClick: _cache[12] || (_cache[12] = withModifiers($event => ($data.override_current_domain_once=true), ["prevent"]))
                   }, "Override once (dangerous!).")
                 ]))
-              : createCommentVNode("v-if", true),
-            createBaseVNode("span", null, toDisplayString($data.derive_password_error), 1 /* TEXT */)
           ]))
         : createCommentVNode("v-if", true)
     ]),
     ($data.derived_password_from_url)
-      ? (openBlock(), createElementBlock("div", _hoisted_12, [
-          createBaseVNode("div", _hoisted_13, [
-            _hoisted_14,
-            createBaseVNode("div", _hoisted_15, [
+      ? (openBlock(), createElementBlock("div", _hoisted_13, [
+          createBaseVNode("div", _hoisted_14, [
+            _hoisted_15,
+            createBaseVNode("div", _hoisted_16, [
               withDirectives(createBaseVNode("input", {
                 class: "form-control form-control-sm text-monospace",
                 type: $data.reveal_derived_password?'text':'password',
                 "onUpdate:modelValue": _cache[13] || (_cache[13] = $event => (($data.derived_password_from_url) = $event)),
                 readonly: "",
                 onClick: _cache[14] || (_cache[14] = $event => ($event.target.select()))
-              }, null, 8 /* PROPS */, _hoisted_16), [
+              }, null, 8 /* PROPS */, _hoisted_17), [
                 [vModelDynamic, $data.derived_password_from_url]
               ]),
               createBaseVNode("button", {
@@ -33193,8 +33191,8 @@ function PSMPwdgenvue_type_template_id_04507f14_render(_ctx, _cache, $props, $se
               }, toDisplayString($data.reveal_derived_password ? 'Hide':'Show'), 1 /* TEXT */)
             ])
           ]),
-          createBaseVNode("div", _hoisted_17, [
-            createBaseVNode("div", _hoisted_18, [
+          createBaseVNode("div", _hoisted_18, [
+            createBaseVNode("div", _hoisted_19, [
               createBaseVNode("button", {
                 class: "btn btn-primary btn-sm",
                 onClick: _cache[16] || (_cache[16] = (...args) => ($options.on_result_copy && $options.on_result_copy(...args)))
@@ -33209,7 +33207,7 @@ function PSMPwdgenvue_type_template_id_04507f14_render(_ctx, _cache, $props, $se
       : createCommentVNode("v-if", true)
   ]))
 }
-;// CONCATENATED MODULE: ./src/vue/options/PSMPwdgen.vue?vue&type=template&id=04507f14
+;// CONCATENATED MODULE: ./src/vue/options/PSMPwdgen.vue?vue&type=template&id=ecb2b314
 
 ;// CONCATENATED MODULE: ./src/vue/options/psm_instance.js
 const psm = __webpack_require__(39);
@@ -33456,7 +33454,7 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
 
 
 ;
-const PSMPwdgen_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(PSMPwdgenvue_type_script_lang_js, [['render',PSMPwdgenvue_type_template_id_04507f14_render]])
+const PSMPwdgen_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(PSMPwdgenvue_type_script_lang_js, [['render',PSMPwdgenvue_type_template_id_ecb2b314_render]])
 
 /* harmony default export */ const PSMPwdgen = (PSMPwdgen_exports_);
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=script&lang=js
@@ -33588,7 +33586,7 @@ function CoreStartervue_type_script_lang_js_readfile(event) {
 
 
 ;
-const CoreStarter_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(CoreStartervue_type_script_lang_js, [['render',CoreStartervue_type_template_id_d7c876a0_render]])
+const CoreStarter_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(CoreStartervue_type_script_lang_js, [['render',CoreStartervue_type_template_id_02021448_render]])
 
 /* harmony default export */ const CoreStarter = (CoreStarter_exports_);
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreSeedfileGenerator.vue?vue&type=template&id=949273f6
