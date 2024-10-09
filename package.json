@@ -29,7 +29,7 @@
     "@ygoe/msgpack": "^1.0.3",
     "buffer": "^6.0.3",
     "lodash": "^4.17.21",
-    "password-security-module": "^1.0.0",
+    "password-security-module": "^1.1.0",
     "url-parse": "^1.5.10"
   }
 }

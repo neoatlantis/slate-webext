@@ -21,8 +21,8 @@ importers:
         specifier: ^4.17.21
         version: 4.17.21
       password-security-module:
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.1.0
+        version: 1.1.0
       url-parse:
         specifier: ^1.5.10
         version: 1.5.10
@@ -754,8 +754,8 @@ packages:
   pascal-case@3.1.2:
     resolution: {integrity: sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==}
 
-  password-security-module@1.0.0:
-    resolution: {integrity: sha512-0dflnxfYKiEH8YsjEWW+rI4iHyuBk7hGUA8hql25l7mscNcV+8Zycc1I8076yXQOjlOcKlYJZpRtr73f8Q233Q==}
+  password-security-module@1.1.0:
+    resolution: {integrity: sha512-F1fNXI0EVQWbHtpMtQ2s1XkJd3V2pwoxka2OMo1A3DPQ936f10icb1fBRHj52Jj5naZOZ56LhDDlxiiWIdI/EQ==}
 
   path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
@@ -1759,9 +1759,10 @@ snapshots:
       no-case: 3.0.4
       tslib: 2.6.2
 
-  password-security-module@1.0.0:
+  password-security-module@1.1.0:
     dependencies:
       '@msgpack/msgpack': 3.0.0-beta2
+      '@stdlib/assert-is-uint8array': 0.2.2
       json-stringify-deterministic: 1.0.12
       lodash: 4.17.21
       url-parse: 1.5.10

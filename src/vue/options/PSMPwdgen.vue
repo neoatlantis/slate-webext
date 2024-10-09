@@ -126,10 +126,9 @@ import _ from "lodash";
 import url_parse from "url-parse";
 import { open_seedfile } from "app/crypto/seedfile";
 import EmojiChar from "./EmojiChar.vue";
-import { get_pwdgen } from "./psm_instance.js";
-
-const channel_update_password = new BroadcastChannel("slate/update-password");
-const channel_push_password   = new BroadcastChannel("slate/push-password");
+import { get_pwdgen, get_vault } from "./psm_instance.js";
+import { on, prepare_message } from "app/lib/runtime_message_dispatcher";
+import { json2buffer, buffer2json } from "app/lib/json_buffer_conv";
 
 
 function readfile(event) {
@@ -171,10 +170,6 @@ export default {
             get_current_tab.call(this);
         });
         get_current_tab.call(this);
-
-        channel_push_password.onmessage = (event)=>{
-            this.broadcast_result();
-        }
     },
 
     data(){ return {
@@ -255,11 +250,20 @@ export default {
     },
 
     methods: {
-        broadcast_result(){
-            channel_update_password.postMessage({
-                password: this.derived_password_from_url.toString(),
-                domain: this.current_domain.toString(),
-            });
+        async broadcast_result(){
+            // Send password to background for backup. 
+            // Password & domain info is stored encrypted, so it can be saved
+            // securely on local storage.
+            //
+            // -- TODO maybe we should use temporary key for this storage!
+            let message = prepare_message(
+                "password.update", 
+                await get_vault().encrypt(json2buffer({
+                    password: this.derived_password_from_url.toString(),
+                    domain: this.current_domain.toString(),
+                }))
+            );
+            chrome.runtime.sendMessage(message);
         },
 
         clear_output(keep_override){

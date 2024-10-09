@@ -1,22 +1,10 @@
 import _ from "lodash";
 import until from "app/lib/until";
+import { on, prepare_message } from "app/lib/runtime_message_dispatcher";
 
 const MENU_FILL_ID = "neoatlantis-slate-password";
 
 
-const channel_push_password   = new BroadcastChannel("slate/push-password");
-const channel_update_password = new BroadcastChannel("slate/update-password");
-let current_password = {}; // { password, domain }
-let current_password_updated = false;
-channel_update_password.onmessage = (event)=>{
-	current_password_updated = true;
-	current_password = event.data;
-}
-
-async function request_password(){
-	current_password_updated = false;
-	return until(()=>current_password_updated===true, 1000);
-}
 
 
 async function on_browser_menus_clicked(info, tab){
@@ -45,7 +33,11 @@ async function on_browser_menus_clicked(info, tab){
     });
 }
 
-
+on("password.update", function(data, sendResponse){
+	console.log("Received updated password at background.");
+	console.log(data);
+	// TODO save this password.
+});
 
 
 browser.runtime.onInstalled.addListener(() => {

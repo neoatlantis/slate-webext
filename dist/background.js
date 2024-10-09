@@ -17299,53 +17299,39 @@ var __webpack_exports__ = {};
 // EXTERNAL MODULE: ./node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/lodash.js
 var lodash = __webpack_require__(935);
 var lodash_default = /*#__PURE__*/__webpack_require__.n(lodash);
-;// CONCATENATED MODULE: ./src/lib/until.js
-const until = (fn, time = 1000) => {
-  try {                                 /* [1] */
-    if (fn()) {
-      return Promise.resolve(true);
-    } else {
-      return new Promise((resolve, reject) => {
-        const timer = setInterval(() => {
-          try {                         /* [2] */ 
-            if (fn()) {
-              clearInterval(timer);
-              resolve(true);
-            }
-          } catch (e) {                 /* [3] */
-            clearInterval(timer);       /* [4] */
-            reject(e);                  /* [5] */
-          }
-        }, time);
-      });
-    }
-  } catch (e) {                         /* [6] */
-    return Promise.reject(e);           /* [7] */
-  }
-};
+;// CONCATENATED MODULE: ./src/lib/runtime_message_dispatcher.js
 
 
-/* harmony default export */ const lib_until = (until);
+let handlers = {};
+
+browser.runtime.onMessage.addListener((message, sender, sendResponse)=>{
+	let topic = lodash_default().get(message, "topic"),
+		data = lodash_default().get(message, "data");
+
+	if(lodash_default().isFunction(handlers[topic])){
+		handlers[topic].call({
+			message,
+			sender,
+		}, data, sendResponse); // function (data, sendResponse) with { this.message, this.sender } as context
+	};
+});
+
+function on(topic, func){ handlers[topic] = func };
+function prepare_message(topic, data){
+	return { topic, data };
+}
+
+
+
+
 ;// CONCATENATED MODULE: ./src/background.js
+
 
 
 
 const MENU_FILL_ID = "neoatlantis-slate-password";
 
 
-const channel_push_password   = new BroadcastChannel("slate/push-password");
-const channel_update_password = new BroadcastChannel("slate/update-password");
-let current_password = {}; // { password, domain }
-let current_password_updated = false;
-channel_update_password.onmessage = (event)=>{
-	current_password_updated = true;
-	current_password = event.data;
-}
-
-async function request_password(){
-	current_password_updated = false;
-	return lib_until(()=>current_password_updated===true, 1000);
-}
 
 
 async function on_browser_menus_clicked(info, tab){
@@ -17374,7 +17360,11 @@ async function on_browser_menus_clicked(info, tab){
     });
 }
 
-
+on("password.update", function(data, sendResponse){
+	console.log("Received updated password at background.");
+	console.log(data);
+	// TODO save this password.
+});
 
 
 browser.runtime.onInstalled.addListener(() => {
