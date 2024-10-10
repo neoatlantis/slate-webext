@@ -33039,19 +33039,19 @@ var exportHelper = __webpack_require__(451);
 const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.A)(EmojiCharvue_type_script_lang_js, [['render',EmojiCharvue_type_template_id_3d8ef1f6_render]])
 
 /* harmony default export */ const EmojiChar = (__exports__);
-;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/PSMPwdgen.vue?vue&type=template&id=e35770bc
+;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/PSMPwdgen.vue?vue&type=template&id=2d896e68
 
 
-const PSMPwdgenvue_type_template_id_e35770bc_hoisted_1 = { class: "box" }
-const PSMPwdgenvue_type_template_id_e35770bc_hoisted_2 = { class: "mb-1 input-group-sm input-group" }
-const PSMPwdgenvue_type_template_id_e35770bc_hoisted_3 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Current domain:", -1 /* HOISTED */)
-const PSMPwdgenvue_type_template_id_e35770bc_hoisted_4 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, " Password Request URL: ", -1 /* HOISTED */)
-const PSMPwdgenvue_type_template_id_e35770bc_hoisted_5 = { class: "mb-1 input-group-sm input-group" }
-const PSMPwdgenvue_type_template_id_e35770bc_hoisted_6 = { class: "mb-1 input-group-sm input-group" }
-const PSMPwdgenvue_type_template_id_e35770bc_hoisted_7 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Length:", -1 /* HOISTED */)
-const PSMPwdgenvue_type_template_id_e35770bc_hoisted_8 = { class: "" }
-const PSMPwdgenvue_type_template_id_e35770bc_hoisted_9 = ["disabled"]
-const PSMPwdgenvue_type_template_id_e35770bc_hoisted_10 = {
+const PSMPwdgenvue_type_template_id_2d896e68_hoisted_1 = { class: "box" }
+const PSMPwdgenvue_type_template_id_2d896e68_hoisted_2 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_2d896e68_hoisted_3 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Current domain:", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_2d896e68_hoisted_4 = /*#__PURE__*/createBaseVNode("label", { class: "label" }, " Password Request URL: ", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_2d896e68_hoisted_5 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_2d896e68_hoisted_6 = { class: "mb-1 input-group-sm input-group" }
+const PSMPwdgenvue_type_template_id_2d896e68_hoisted_7 = /*#__PURE__*/createBaseVNode("span", { class: "input-group-text bg-white" }, "Length:", -1 /* HOISTED */)
+const PSMPwdgenvue_type_template_id_2d896e68_hoisted_8 = { class: "" }
+const PSMPwdgenvue_type_template_id_2d896e68_hoisted_9 = ["disabled"]
+const PSMPwdgenvue_type_template_id_2d896e68_hoisted_10 = {
   key: 0,
   style: {"color":"red"},
   class: "field"
@@ -33069,11 +33069,11 @@ const _hoisted_17 = ["type"]
 const _hoisted_18 = { class: "field" }
 const _hoisted_19 = { class: "buttons" }
 
-function PSMPwdgenvue_type_template_id_e35770bc_render(_ctx, _cache, $props, $setup, $data, $options) {
+function PSMPwdgenvue_type_template_id_2d896e68_render(_ctx, _cache, $props, $setup, $data, $options) {
   return (openBlock(), createElementBlock("div", null, [
-    createBaseVNode("div", PSMPwdgenvue_type_template_id_e35770bc_hoisted_1, [
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_e35770bc_hoisted_2, [
-        PSMPwdgenvue_type_template_id_e35770bc_hoisted_3,
+    createBaseVNode("div", PSMPwdgenvue_type_template_id_2d896e68_hoisted_1, [
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_2d896e68_hoisted_2, [
+        PSMPwdgenvue_type_template_id_2d896e68_hoisted_3,
         withDirectives(createBaseVNode("input", {
           class: "form-control text-monospace bg-secondary text-white",
           type: "text",
@@ -33083,8 +33083,8 @@ function PSMPwdgenvue_type_template_id_e35770bc_render(_ctx, _cache, $props, $se
           [vModelText, $data.current_domain]
         ])
       ]),
-      PSMPwdgenvue_type_template_id_e35770bc_hoisted_4,
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_e35770bc_hoisted_5, [
+      PSMPwdgenvue_type_template_id_2d896e68_hoisted_4,
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_2d896e68_hoisted_5, [
         createBaseVNode("a", {
           href: "#",
           class: "btn btn-outline-secondary",
@@ -33110,8 +33110,8 @@ function PSMPwdgenvue_type_template_id_e35770bc_render(_ctx, _cache, $props, $se
           onClick: _cache[5] || (_cache[5] = withModifiers((...args) => ($options.on_url_copy && $options.on_url_copy(...args)), ["prevent"]))
         }, "Copy")
       ]),
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_e35770bc_hoisted_6, [
-        PSMPwdgenvue_type_template_id_e35770bc_hoisted_7,
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_2d896e68_hoisted_6, [
+        PSMPwdgenvue_type_template_id_2d896e68_hoisted_7,
         withDirectives(createBaseVNode("input", {
           class: "form-control text-monospace",
           type: "number",
@@ -33150,15 +33150,15 @@ function PSMPwdgenvue_type_template_id_e35770bc_render(_ctx, _cache, $props, $se
           onClick: _cache[10] || (_cache[10] = $event => ($data.derive_option_special=!$data.derive_option_special))
         }, "@#$", 2 /* CLASS */)
       ]),
-      createBaseVNode("div", PSMPwdgenvue_type_template_id_e35770bc_hoisted_8, [
+      createBaseVNode("div", PSMPwdgenvue_type_template_id_2d896e68_hoisted_8, [
         createBaseVNode("button", {
           class: "btn btn-sm btn-primary",
           onClick: _cache[11] || (_cache[11] = (...args) => ($options.on_derive && $options.on_derive(...args))),
           disabled: !$options.can_derive_password
-        }, "Derive", 8 /* PROPS */, PSMPwdgenvue_type_template_id_e35770bc_hoisted_9)
+        }, "Derive", 8 /* PROPS */, PSMPwdgenvue_type_template_id_2d896e68_hoisted_9)
       ]),
       ($data.derive_password_error || !$options.current_domain_matched)
-        ? (openBlock(), createElementBlock("div", PSMPwdgenvue_type_template_id_e35770bc_hoisted_10, [
+        ? (openBlock(), createElementBlock("div", PSMPwdgenvue_type_template_id_2d896e68_hoisted_10, [
             ($data.derive_password_error)
               ? (openBlock(), createElementBlock("span", _hoisted_11, toDisplayString($data.derive_password_error), 1 /* TEXT */))
               : (openBlock(), createElementBlock("span", _hoisted_12, [
@@ -33207,7 +33207,7 @@ function PSMPwdgenvue_type_template_id_e35770bc_render(_ctx, _cache, $props, $se
       : createCommentVNode("v-if", true)
   ]))
 }
-;// CONCATENATED MODULE: ./src/vue/options/PSMPwdgen.vue?vue&type=template&id=e35770bc
+;// CONCATENATED MODULE: ./src/vue/options/PSMPwdgen.vue?vue&type=template&id=2d896e68
 
 ;// CONCATENATED MODULE: ./src/lib/runtime_message_dispatcher.js
 
@@ -33234,7 +33234,22 @@ function prepare_message(topic, data){
 
 
 
+;// CONCATENATED MODULE: ./src/lib/json_buffer_conv.js
+function json2buffer(json){
+	let data = JSON.stringify(json);
+	let encoder = new TextEncoder();
+	return encoder.encode(data);
+}
+
+function buffer2json(buffer){
+	let decoder = new TextDecoder();
+	let string = decoder.decode(buffer);
+	return JSON.parse(string);
+}
+
+
 ;// CONCATENATED MODULE: ./src/vue/options/psm_instance.js
+
 
 
 const psm = __webpack_require__(250);
@@ -33265,29 +33280,31 @@ function destroy_core(){
 
 
 function decrypt_with_vault(data, sendResponse){
-    let vault = get_vault();
+    let vault = null;
+    try{
+        vault = get_vault();
+    } catch(e){
+        return;
+    }
+    console.log("Vault get decrypt request:", data);
+    console.log(this.sender, this.message);
+
     vault.decrypt(data).then((result)=>{
-        sendResponse({ ok: result });
-    }).catch(e=>{ sendResponse({ error: e }) });
+        try{
+            result = buffer2json(result);
+        } catch(e){
+            console.error(e);
+        }
+        browser.runtime.sendMessage(prepare_message(
+            "password.decrypted",
+            result
+        ));
+    }).catch(e=>{ });
 }
 
 
 
 
-
-
-;// CONCATENATED MODULE: ./src/lib/json_buffer_conv.js
-function json2buffer(json){
-	let data = JSON.stringify(json);
-	let encoder = new TextEncoder();
-	return encoder.encode(data);
-}
-
-function buffer2json(buffer){
-	let decoder = new TextDecoder();
-	let string = decoder.decode(buffer);
-	return JSON.parse(buffer);
-}
 
 
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/PSMPwdgen.vue?vue&type=script&lang=js
@@ -33427,7 +33444,7 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
             //
             // -- TODO maybe we should use temporary key for this storage!
             let message = prepare_message(
-                "password.update", 
+                "password.cache", 
                 await get_vault().encrypt(json2buffer({
                     password: this.derived_password_from_url.toString(),
                     domain: this.current_domain.toString(),
@@ -33442,6 +33459,10 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
             this.reveal_derived_password = false;
             if(!keep_override){
                 this.override_current_domain_once = false;
+            }
+            try{
+                navigator.clipboard.writeText("");
+            } catch(e){
             }
         },
 
@@ -33519,7 +33540,7 @@ function PSMPwdgenvue_type_script_lang_js_get_current_tab(){
 
 
 ;
-const PSMPwdgen_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(PSMPwdgenvue_type_script_lang_js, [['render',PSMPwdgenvue_type_template_id_e35770bc_render]])
+const PSMPwdgen_exports_ = /*#__PURE__*/(0,exportHelper/* default */.A)(PSMPwdgenvue_type_script_lang_js, [['render',PSMPwdgenvue_type_template_id_2d896e68_render]])
 
 /* harmony default export */ const PSMPwdgen = (PSMPwdgen_exports_);
 ;// CONCATENATED MODULE: ./node_modules/.pnpm/ifdef-loader@2.3.2/node_modules/ifdef-loader/ifdef-loader.js??clonedRuleSet-1!./node_modules/.pnpm/vue-loader@17.4.2_vue@3.4.27_typescript@5.4.5__webpack@5.91.0_webpack-cli@5.1.4_/node_modules/vue-loader/dist/index.js??ruleSet[1].rules[5].use[0]!./src/vue/options/CoreStarter.vue?vue&type=script&lang=js

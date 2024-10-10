@@ -1,4 +1,5 @@
 import { on, prepare_message } from "app/lib/runtime_message_dispatcher";
+import { buffer2json } from "app/lib/json_buffer_conv";
 
 const psm = require("password-security-module");
 
@@ -28,10 +29,26 @@ function destroy_core(){
 
 
 function decrypt_with_vault(data, sendResponse){
-    let vault = get_vault();
+    let vault = null;
+    try{
+        vault = get_vault();
+    } catch(e){
+        return;
+    }
+    console.log("Vault get decrypt request:", data);
+    console.log(this.sender, this.message);
+
     vault.decrypt(data).then((result)=>{
-        sendResponse({ ok: result });
-    }).catch(e=>{ sendResponse({ error: e }) });
+        try{
+            result = buffer2json(result);
+        } catch(e){
+            console.error(e);
+        }
+        browser.runtime.sendMessage(prepare_message(
+            "password.decrypted",
+            result
+        ));
+    }).catch(e=>{ });
 }
 
 

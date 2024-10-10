@@ -14,6 +14,9 @@ importers:
       '@ygoe/msgpack':
         specifier: ^1.0.3
         version: 1.0.3
+      async-until:
+        specifier: ^4.0.1
+        version: 4.0.1
       buffer:
         specifier: ^6.0.3
         version: 6.0.3
@@ -325,6 +328,9 @@ packages:
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
+
+  async-until@4.0.1:
+    resolution: {integrity: sha512-WiwWMPatLk9zWPcBfdRzwtvccJa12klIvF5R0m9mv4J1kU6qyqqEP99u2NYSsa+IWFcOhIAEZG4eqG/kqa9vYg==}
 
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
@@ -1360,6 +1366,8 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+
+  async-until@4.0.1: {}
 
   base64-js@1.5.1: {}
 

@@ -7,7 +7,7 @@ function json2buffer(json){
 function buffer2json(buffer){
 	let decoder = new TextDecoder();
 	let string = decoder.decode(buffer);
-	return JSON.parse(buffer);
+	return JSON.parse(string);
 }
 
 export { json2buffer, buffer2json };

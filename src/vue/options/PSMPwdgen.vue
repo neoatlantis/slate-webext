@@ -257,7 +257,7 @@ export default {
             //
             // -- TODO maybe we should use temporary key for this storage!
             let message = prepare_message(
-                "password.update", 
+                "password.cache", 
                 await get_vault().encrypt(json2buffer({
                     password: this.derived_password_from_url.toString(),
                     domain: this.current_domain.toString(),
@@ -272,6 +272,10 @@ export default {
             this.reveal_derived_password = false;
             if(!keep_override){
                 this.override_current_domain_once = false;
+            }
+            try{
+                navigator.clipboard.writeText("");
+            } catch(e){
             }
         },
 

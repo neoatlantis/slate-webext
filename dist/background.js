@@ -17299,6 +17299,46 @@ var __webpack_exports__ = {};
 // EXTERNAL MODULE: ./node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/lodash.js
 var lodash = __webpack_require__(935);
 var lodash_default = /*#__PURE__*/__webpack_require__.n(lodash);
+;// CONCATENATED MODULE: ./node_modules/.pnpm/async-until@4.0.1/node_modules/async-until/dist/index.js
+async function until(cb, opts = {}) {
+    const { failMsg, timeout = 300, loopDelay = 0, minLoops = 3 } = opts;
+    const t1 = Date.now();
+    return new Promise((resolve, reject) => {
+        // Why the loop count if we already have a timeout? Well, say something
+        // happens and our program freezes for a timeout + 1ms duration. The
+        // callback will run in the next loop and instantly expire if the condition
+        // isn't met. Sometimes our app releases a chain of async callbacks that
+        // need to fulfill before our condition is met, so the min loop count
+        // ensures we don't bail too soon in case of a hiccup.
+        let loopCount = 0;
+        async function loop() {
+            loopCount += 1;
+            if (await run()) {
+                resolve(true);
+            }
+            else if (Date.now() - t1 < timeout || loopCount < minLoops) {
+                setTimeout(loop, loopDelay);
+            }
+            else {
+                reject(new Error(failMsg || getDefaultMessage(cb)));
+            }
+        }
+        async function run() {
+            try {
+                return cb();
+            }
+            catch (err) {
+                reject(err);
+            }
+        }
+        // Kick it
+        loop();
+    });
+}
+function getDefaultMessage(cb) {
+    return `Timeout expired. Condition wasn't met: ${cb}`;
+}
+
 ;// CONCATENATED MODULE: ./src/lib/runtime_message_dispatcher.js
 
 
@@ -17332,6 +17372,29 @@ function prepare_message(topic, data){
 const MENU_FILL_ID = "neoatlantis-slate-password";
 
 
+var requested_password = null;
+
+
+
+async function request_password(){
+	let password = lodash_default().get(
+		await browser.storage.local.get('password'),
+		'password'
+	);
+	if(!lodash_default().isString(password)) return null;
+
+
+	requested_password = null;
+	let decrypt_request_message = prepare_message("vault.decrypt", password);
+	chrome.runtime.sendMessage(decrypt_request_message);
+	await until(()=>{ return !lodash_default().isNil(requested_password) }, {
+		timeout: 1000,
+		loopDelay: 100,
+	});
+
+	return !lodash_default().isNil(requested_password);
+}
+
 
 
 async function on_browser_menus_clicked(info, tab){
@@ -17344,9 +17407,10 @@ async function on_browser_menus_clicked(info, tab){
 	const pageUrl = new URL(lodash_default().get(info, "pageUrl"));
 	console.log(pageUrl);
 
-	await request_password();
+	if(!await request_password()) return;
 
-	let text = lodash_default().get(current_password, "password");// TODO verify domain?
+
+	let text = lodash_default().get(requested_password, "password");// TODO verify domain?
 	if(!lodash_default().isString(text)) return;
 
 	function injected(text){
@@ -17358,13 +17422,25 @@ async function on_browser_menus_clicked(info, tab){
     	func: injected,
     	args: [text],
     });
+
+    requested_password = null;
 }
 
-on("password.update", function(data, sendResponse){
+on("password.cache", function(data){
 	console.log("Received updated password at background.");
-	console.log(data);
-	// TODO save this password.
+	browser.storage.local.set({
+		password: data,
+	});
 });
+
+on("password.decrypted", function(data){
+	console.log("Received decrypted password.");
+	requested_password = data;
+});
+
+
+
+
 
 
 browser.runtime.onInstalled.addListener(() => {
