@@ -228,6 +228,8 @@ export default {
         },
 
         derive_from_url(){
+            this.clear_output(false, true);
+
             let url_p = url_parse(this.derive_from_url);
             if(!url_p || !_.startsWith(url_p.protocol, "psm-")) return;
 
@@ -239,7 +241,7 @@ export default {
             this.derive_option_upper = !_.isNil(qsp.get("upper"));
             this.derive_option_lower = !_.isNil(qsp.get("lower"));
             this.derive_option_number = !_.isNil(qsp.get("number"));
-            this.derive_option_special = !_.isNil(qsp.get("special"));          
+            this.derive_option_special = !_.isNil(qsp.get("special"));
         },
 
         derive_option_length(){ this.rewrite_derive_option() },
@@ -268,16 +270,18 @@ export default {
             chrome.runtime.sendMessage(message);
         },
 
-        clear_output(keep_override){
+        clear_output(keep_override, keep_clipboard){
             this.derived_password_from_url = "";
             this.derive_password_error = "";
             this.reveal_derived_password = false;
             if(!keep_override){
                 this.override_current_domain_once = false;
             }
-            try{
-                navigator.clipboard.writeText("");
-            } catch(e){
+            if(!keep_clipboard){
+                try{
+                    navigator.clipboard.writeText("");
+                } catch(e){
+                }
             }
         },
 
