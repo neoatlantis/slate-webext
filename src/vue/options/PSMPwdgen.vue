@@ -90,9 +90,7 @@
 
     <div class="mt-2 card p-1 bg-light" v-if="derived_password_from_url">
         <div class="field">
-            <label class="label">
-                Result:
-            </label>
+            <strong>Your password:</strong>
             <div class="mb-1 input-group-sm input-group">
                 <input 
                     class="form-control form-control-sm font-monospace"
@@ -308,8 +306,8 @@ export default {
                 this.derived_password_from_url = password;
                 this.broadcast_result();
             } catch(e){
-                this.derive_password_error = e.message;
                 this.clear_output();
+                this.derive_password_error = e.message;
             }
         },
 
@@ -317,6 +315,11 @@ export default {
             let pwdgen = get_pwdgen();
             this.derive_from_url = await pwdgen.create_url(
                 this.current_domain);
+            
+            // fix, by default new 'psm-pwdgen://' url has no spec on charset
+            // and not ready for derivation.
+            this.derive_from_url += "&lower&number"; 
+            
             this.url_copied = false;
             this.on_derive();
         },
