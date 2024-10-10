@@ -123,12 +123,15 @@
 </div></template>
 <script>
 import _ from "lodash";
+import { nextTick } from "vue";
 import url_parse from "url-parse";
 import { open_seedfile } from "app/crypto/seedfile";
 import EmojiChar from "./EmojiChar.vue";
 import { get_pwdgen, get_vault } from "./psm_instance.js";
 import { on, prepare_message } from "app/lib/runtime_message_dispatcher";
 import { json2buffer, buffer2json } from "app/lib/json_buffer_conv";
+
+const uuid = require("uuid");
 
 
 function readfile(event) {
@@ -170,9 +173,18 @@ export default {
             get_current_tab.call(this);
         });
         get_current_tab.call(this);
+
+        on("password.cache.updated", (data)=>{
+            if(data.uuid == this.uuid){
+                // TODO send notification
+                return;
+            }
+            this.clear_output();
+        });
     },
 
     data(){ return {
+        uuid: uuid.v4(),
         core_test: null,
 
         derive_from_url: "",
@@ -261,11 +273,14 @@ export default {
             //
             // -- TODO maybe we should use temporary key for this storage!
             let message = prepare_message(
-                "password.cache", 
-                await get_vault().encrypt(json2buffer({
-                    password: this.derived_password_from_url.toString(),
-                    domain: this.current_domain.toString(),
-                }))
+                "password.cache",
+                {
+                    uuid: this.uuid,
+                    encrypted: await get_vault().encrypt(json2buffer({
+                        password: this.derived_password_from_url.toString(),
+                        domain: this.current_domain.toString(),
+                    })),
+                }
             );
             chrome.runtime.sendMessage(message);
         },
@@ -302,6 +317,8 @@ export default {
 
         async on_derive(){
             this.clear_output(true);
+            await nextTick();
+            
             let pwdgen = get_pwdgen();
 
             let url = this.derive_from_url.toString();

@@ -61,9 +61,14 @@ async function on_browser_menus_clicked(info, tab){
 
 on("password.cache", function(data){
 	console.log("Received updated password at background.");
+	let uuid = data.uuid;
 	browser.storage.local.set({
-		password: data,
+		password: data.encrypted,
 	});
+	browser.runtime.sendMessage(prepare_message(
+		"password.cache.updated",
+		{ uuid }
+	));
 });
 
 on("password.decrypted", function(data){
