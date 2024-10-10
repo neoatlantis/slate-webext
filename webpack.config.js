@@ -88,7 +88,7 @@ module.exports = (env)=>{
     function __template(srcpath, dstpath, scriptname, pagename){ return {
         entry: path.join(srcpath, scriptname),
         mode: (
-            is_dev
+            false
             ?'development'
             :'production'
         ),

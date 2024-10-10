@@ -58,6 +58,10 @@ import EmojiChar from "./EmojiChar.vue";
 import PSMPwdgen from "./PSMPwdgen.vue";
 import { init_with_core, destroy_core } from "./psm_instance.js";
 
+/// #if DEV
+import get_test_seed from "app/test-seedfile.js";
+/// #endif
+
 
 
 function readfile(event) {
@@ -91,6 +95,10 @@ export default {
 
 	data(){ return {
 		seedfile: "",
+		/// #if DEV
+		seedfile: get_test_seed(),
+		/// #endif
+
 		password: "",
 		core: null,
 		core_test: null,

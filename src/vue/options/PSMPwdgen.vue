@@ -1,11 +1,11 @@
 <template><div>
 
-    <div class="box">
+    <div class="card p-1 bg-light">
 
         <div class="mb-1 input-group-sm input-group">
             <span class="input-group-text bg-white">Current domain:</span>
             <input
-                class="form-control text-monospace bg-secondary text-white"
+                class="form-control font-monospace bg-secondary text-white"
                 type="text" v-model="current_domain" readonly />
         </div>
 
@@ -19,7 +19,7 @@
             <a href="#" class="btn btn-outline-secondary"
                 @click.prevent="on_paste">Paste</a>
             <input
-                class="form-control text-monospace"
+                class="form-control font-monospace"
                 type="text"
                 v-model="derive_from_url"
                 placeholder="psm-pwdgen://"
@@ -32,7 +32,7 @@
         <div class="mb-1 input-group-sm input-group">
             <span class="input-group-text bg-white">Length:</span>
             <input 
-                class="form-control text-monospace"
+                class="form-control font-monospace"
                 type="number" v-model="derive_option_length" min="6" max="256"/>
 
             <button
@@ -86,14 +86,14 @@
     </div>
 
 
-    <div class="mb-2" v-if="derived_password_from_url">
+    <div class="mt-2 card p-1 bg-light" v-if="derived_password_from_url">
         <div class="field">
             <label class="label">
                 Result:
             </label>
             <div class="mb-1 input-group-sm input-group">
                 <input 
-                    class="form-control form-control-sm text-monospace"
+                    class="form-control form-control-sm font-monospace"
                     :type="reveal_derived_password?'text':'password'"
                     v-model="derived_password_from_url"
                     readonly
