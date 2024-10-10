@@ -26,7 +26,9 @@
                 @click="$event.target.select()"
             />
             <a href="#" class="btn btn-outline-secondary"
-                @click.prevent="on_url_copy">Copy</a>            
+                @click.prevent="on_url_copy">Copy</a>
+            <a href="#" class="btn btn-outline-danger"
+                @click.prevent="on_url_clear">X</a>
         </div>
             
         <div class="mb-1 input-group-sm input-group">
@@ -76,7 +78,7 @@
             >Derive</button>
         </div>
 
-        <div style="color:red" class="field" v-if="derive_password_error || !current_domain_matched">
+        <div style="color:red" class="mt-1" v-if="derive_password_error || !current_domain_matched">
             <span v-if="derive_password_error">{{ derive_password_error }}</span>
             <span v-else>
                 Password URL not for current domain. Deriving not allowed.
@@ -176,6 +178,8 @@ export default {
         core_test: null,
 
         derive_from_url: "",
+        url_copied: false,
+
         derived_password_from_url: "",
         derive_password_error: "",
         reveal_derived_password: false,
@@ -313,12 +317,14 @@ export default {
             let pwdgen = get_pwdgen();
             this.derive_from_url = await pwdgen.create_url(
                 this.current_domain);
+            this.url_copied = false;
             this.on_derive();
         },
 
         async on_paste(){
             let text = await navigator.clipboard.readText();
             this.derive_from_url = text;
+            this.url_copied = true;
         },
 
         async on_result_copy(){
@@ -334,9 +340,19 @@ export default {
             try{
                 await navigator.clipboard.writeText(
                     this.derive_from_url);
+                this.url_copied = true;
             } catch(e){
                 alert("Failed writing url to clipboard.");
             }
+        },
+
+        async on_url_clear(){
+            console.log("url clear", this.url_copied);
+            if(!this.url_copied){
+                if(!confirm("Sure to clear this URL?")) return;
+            }
+            this.derive_from_url = '';
+            this.url_copied = true;
         }
     },
 

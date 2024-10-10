@@ -80,6 +80,13 @@ function readfile(event) {
 
 export default {
 	mounted(){
+		/// #if DEV
+		setTimeout(()=>{
+			console.log("Autostart");
+			this.start();
+		}, 100);
+		/// #endif
+
 		browser.tabs.onActivated.addListener(()=>{
 			get_current_tab.call(this);
 		});
@@ -87,10 +94,6 @@ export default {
 			get_current_tab.call(this);
 		});
 		get_current_tab.call(this);
-
-		channel_push_password.onmessage = (event)=>{
-			this.broadcast_result();
-		}
 	},
 
 	data(){ return {
