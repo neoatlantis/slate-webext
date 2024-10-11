@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "NeoAtlantis Slate",
     "description": "A password protection module, converts password request urls into actual passwords while keeping the real secret local at computer.",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "background": {
         "scripts": [
             "background.js"
