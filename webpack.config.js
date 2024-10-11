@@ -9,12 +9,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin')
 const nodeExternals = require('webpack-node-externals');
 
+const ManifestGenerator = require("./webpack/ManifestGenerator.js");
+
 const package_json = JSON.parse(fs.readFileSync("./package.json"));
 
 
 
 function factory_rewrite_manifest_plugin(){
-    function transform(content){
+    const transform = (content)=>{
         let content_str = content.toString();
         let json = JSON.parse(content_str);
 
@@ -61,6 +63,11 @@ module.exports = (env)=>{
 
     const common_srcpath = path.join(__dirname, "common");
 
+    let webext_srcpath = path.join(__dirname, "src");
+    let webext_dstpath = path.join(
+        __dirname,
+        (is_dev?"dev":"dist"));
+
     const generic_rules = [
         {
             test: /\.vue$/,
@@ -104,15 +111,21 @@ module.exports = (env)=>{
                 replacement: PROGRAM_NAME,
             },
         ]),
+        /*factory_rewrite_manifest_plugin.call({
+            from: "src/manifest.json",
+            version: VERSION,
+        }),*/
+        new ManifestGenerator({
+            manifest_src: path.join(webext_srcpath, "manifest.json"),
+            manifest_dst: path.join(webext_dstpath, "manifest.json"),
+            version: VERSION,
+        }),
     ];
 
 
     let ret = [];
 
-    let webext_srcpath = path.join(__dirname, "src");
-    let webext_dstpath = path.join(
-        __dirname,
-        (is_dev?"dev":"dist"));
+    
 
 
     function __template(srcpath, dstpath, scriptname, pagename){ return {
@@ -155,10 +168,6 @@ module.exports = (env)=>{
                         to:   path.join(dstpath, "static"),
                     },
                 ]
-            }),
-            factory_rewrite_manifest_plugin.call({
-                from: "src/manifest.json",
-                version: VERSION,
             }),
         ].concat(generic_plugins),
         optimization: {

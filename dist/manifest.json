@@ -2,9 +2,11 @@
     "manifest_version": 3,
     "name": "NeoAtlantis Slate Browser",
     "description": "A password protection module, converts password request urls into actual passwords while keeping the real secret local at computer.",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "background": {
-        "scripts": ["background.js"],
+        "scripts": [
+            "background.js"
+        ],
         "type": "module"
     },
     "permissions": [
@@ -32,6 +34,6 @@
         }
     },
     "content_security_policy": {
-        "extension_pages": "base-uri 'self'; default-src 'none'; style-src 'sha256-ba526169f8c5f0f0678329f4a24feb3c6bf2c0c18155ab19933ed90a270f8ea6' 'sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65'; script-src 'self'; img-src 'self'"
+        "extension_pages": "base-uri 'self';default-src 'none';script-src 'self' 'sha256-GWIq4zK4k39s8+vm4h2LXMVFiVH6Fk3pSe91FD1rikE=';style-src 'self' 'sha256-wLz3iY/cO4e6vKZ4zRmo4+9XDpMcgKOvv/zEU3OMlRo=' 'sha256-ulJhafjF8PBngyn0ok/rPGvywMGBVasZkz7ZCicPjqY=';connect-src 'none';form-action 'none';"
     }
 }
