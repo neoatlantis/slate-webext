@@ -1,5 +1,6 @@
- const fs = require("fs");
+const fs = require("fs");
 const path = require('path');
+const buffer = require("buffer");
 
 const DefinePlugin = require("webpack").DefinePlugin;
 const CopyPlugin = require("copy-webpack-plugin");
@@ -9,6 +10,35 @@ const HtmlReplaceWebpackPlugin = require('html-replace-webpack-plugin')
 const nodeExternals = require('webpack-node-externals');
 
 const package_json = JSON.parse(fs.readFileSync("./package.json"));
+
+
+
+function factory_rewrite_manifest_plugin(){
+    function transform(content){
+        let content_str = content.toString();
+        let json = JSON.parse(content_str);
+
+        json.version = this.version;
+
+        return Buffer.from(JSON.stringify(json), "utf-8");
+    }
+
+
+    return new CopyPlugin({
+        patterns: [{
+            from: this.from,
+            transform
+        }]
+    })
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -124,8 +154,11 @@ module.exports = (env)=>{
                         from: path.join(srcpath, "static"),
                         to:   path.join(dstpath, "static"),
                     },
-                    "src/manifest.json",
                 ]
+            }),
+            factory_rewrite_manifest_plugin.call({
+                from: "src/manifest.json",
+                version: VERSION,
             }),
         ].concat(generic_plugins),
         optimization: {
