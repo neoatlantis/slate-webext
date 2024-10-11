@@ -57,10 +57,12 @@ class ManifestGenerator {
         manifest.version = this.options.version;
 
         // write csp
-        manifest.content_security_policy.extension_pages = this.#generate_csp({
-            script_hashes,
-            style_hashes,
-        })
+        manifest.content_security_policy = {
+            extension_pages: this.#generate_csp({
+                script_hashes,
+                style_hashes,
+            })
+        };
 
         return JSON.stringify(manifest, null, 4);
     }
