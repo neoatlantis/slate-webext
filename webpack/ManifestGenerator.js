@@ -75,6 +75,8 @@ class ManifestGenerator {
             'style-src': ['self'].concat(style_hashes),
             'connect-src': ['none'],
             'form-action': ['none'],
+            'object-src': ['none'],
+            'frame-ancestors': ['none'],
         };
 
         let result = '';
