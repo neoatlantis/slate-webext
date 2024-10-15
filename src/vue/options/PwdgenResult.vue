@@ -17,6 +17,10 @@
             >{{ reveal ? 'Hide':'Show'}}</button>
         </div>
     </div>
+
+    <div ref="qrcode" class="qr m-3" v-show="reveal">
+    </div>
+
     <div class="field">
         <div class="buttons">
             <button
@@ -35,7 +39,9 @@
 import { get_vault } from "./psm_instance.js";
 import { json2buffer, buffer2json } from "app/lib/json_buffer_conv";
 import { on, prepare_message } from "app/lib/runtime_message_dispatcher";
+
 const uuid = require("uuid");
+const QRCode = require("qrcode-svg");
 
 
 export default {
@@ -61,7 +67,39 @@ export default {
 	}},
 
 	watch: {
-		password(){ this.broadcast_result() },
+		password(){
+			this.broadcast_result();
+			this.reveal = false;
+		},
+		reveal(){
+			if(!this.reveal){
+				this.$refs["qrcode"].innerHTML = "";
+				return;
+			}
+
+			let qrcode = new QRCode({
+				content: this.password,
+				//container: "svg-viewbox",
+				join: true,
+				color: "#000000",
+  				background: "#ffffff",
+			});
+
+			console.log(qrcode.qrcode.modules);
+			//this.$refs["qrcode"].innerHTML = svg.svg();
+
+			let modules= qrcode.qrcode.modules;
+			let qrcode_text = modules.map(row=>{
+				return "<div class='clear'></div>" + row.map(val=>
+					"<div class='" + 
+					(val?'black':'white') +
+					"'></div>"
+				).join("")
+			}).join('');
+
+			console.log(qrcode_text)
+			this.$refs["qrcode"].innerHTML = qrcode_text;
+		}
 	},
 
 	methods: {
@@ -75,6 +113,7 @@ export default {
         },
 
         async on_clear(){
+        	this.reveal = false;
         	this.$emit("clear");
         },
 
