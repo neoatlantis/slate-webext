@@ -1,3 +1,13 @@
 html {
     font-size: 12px;
 }
+
+.qr {
+    line-height: 0;
+}
+.qr div{
+    width: 5px; height: 5px; float: left;
+}
+.qr .black{background-color: black;}
+.qr .white{background-color: white;}
+.qr .clear{ clear: both; }
