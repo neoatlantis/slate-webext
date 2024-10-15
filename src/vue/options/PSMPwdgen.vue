@@ -88,34 +88,12 @@
     </div>
 
 
-    <div class="mt-2 card p-1 bg-light" v-if="derived_password_from_url">
-        <div class="field">
-            <strong>Your password:</strong>
-            <div class="mb-1 input-group-sm input-group">
-                <input 
-                    class="form-control form-control-sm font-monospace"
-                    :type="reveal_derived_password?'text':'password'"
-                    v-model="derived_password_from_url"
-                    readonly
-                    @click="$event.target.select()"
-                />
-                <button
-                    class="btn btn-primary"
-                    @click.prevent="reveal_derived_password=!reveal_derived_password"
-                >{{ reveal_derived_password ? 'Hide':'Show'}}</button>
-            </div>
-        </div>
-        <div class="field">
-            <div class="buttons">
-                <button
-                    class="btn btn-primary btn-sm" @click="on_result_copy"
-                >Copy</button>
-                <button
-                    class="btn btn-danger btn-sm ms-1" @click="clear_output"
-                >Clear</button>
-            </div>
-        </div>
-    </div>
+    <PwdgenResult
+        :password="derived_password_from_url"
+        :domain="current_domain"
+
+        @clear="clear_output"
+    ></PwdgenResult>
 
     
 
@@ -127,11 +105,12 @@ import { nextTick } from "vue";
 import url_parse from "url-parse";
 import { open_seedfile } from "app/crypto/seedfile";
 import EmojiChar from "./EmojiChar.vue";
+import PwdgenResult from "./PwdgenResult.vue";
 import { get_pwdgen, get_vault } from "./psm_instance.js";
 import { on, prepare_message } from "app/lib/runtime_message_dispatcher";
 import { json2buffer, buffer2json } from "app/lib/json_buffer_conv";
 
-const uuid = require("uuid");
+
 
 
 function readfile(event) {
@@ -173,18 +152,9 @@ export default {
             get_current_tab.call(this);
         });
         get_current_tab.call(this);
-
-        on("password.cache.updated", (data)=>{
-            if(data.uuid == this.uuid){
-                // TODO send notification
-                return;
-            }
-            this.clear_output();
-        });
     },
 
     data(){ return {
-        uuid: uuid.v4(),
         core_test: null,
 
         derive_from_url: "",
@@ -192,7 +162,6 @@ export default {
 
         derived_password_from_url: "",
         derive_password_error: "",
-        reveal_derived_password: false,
 
         derive_option_length: 20,
         derive_option_upper: true,
@@ -261,29 +230,10 @@ export default {
         derive_option_lower(){ this.rewrite_derive_option() },
         derive_option_number(){ this.rewrite_derive_option() },
         derive_option_special(){ this.rewrite_derive_option() },
-
-        derived_password_from_url(){ this.broadcast_result() },
     },
 
     methods: {
-        async broadcast_result(){
-            // Send password to background for backup. 
-            // Password & domain info is stored encrypted, so it can be saved
-            // securely on local storage.
-            //
-            // -- TODO maybe we should use temporary key for this storage!
-            let message = prepare_message(
-                "password.cache",
-                {
-                    uuid: this.uuid,
-                    encrypted: await get_vault().encrypt(json2buffer({
-                        password: this.derived_password_from_url.toString(),
-                        domain: this.current_domain.toString(),
-                    })),
-                }
-            );
-            chrome.runtime.sendMessage(message);
-        },
+        
 
         clear_output(keep_override, keep_clipboard){
             this.derived_password_from_url = "";
@@ -325,7 +275,6 @@ export default {
             try{
                 let password = await pwdgen.get_password(url);
                 this.derived_password_from_url = password;
-                this.broadcast_result();
             } catch(e){
                 this.clear_output();
                 this.derive_password_error = e.message;
@@ -351,15 +300,6 @@ export default {
             this.url_copied = true;
         },
 
-        async on_result_copy(){
-            try{
-                await navigator.clipboard.writeText(
-                    this.derived_password_from_url);
-            } catch(e){
-                alert("Failed writing password to clipboard.");
-            }
-        },
-
         async on_url_copy(){
             try{
                 await navigator.clipboard.writeText(
@@ -382,6 +322,7 @@ export default {
 
     components: {
         EmojiChar,
+        PwdgenResult,
     }
 }
 </script>
